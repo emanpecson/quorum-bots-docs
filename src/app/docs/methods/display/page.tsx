@@ -1,3 +1,9 @@
+import NavWrapper from "@/components/navigation/nav-wrapper";
+
 export default function DisplayPage() {
-	return <div>display</div>;
+	return (
+		<NavWrapper title="Display" headers={[]}>
+			in development
+		</NavWrapper>
+	);
 }

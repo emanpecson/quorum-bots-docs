@@ -1,75 +1,58 @@
-import {
-	LinkIcon,
-	LucideIcon,
-	RabbitIcon,
-	SquareFunctionIcon,
-} from "lucide-react";
+import { LinkIcon, LucideIcon, RabbitIcon, SquareFunctionIcon } from "lucide-react";
+import { quorumGithubUrl, quorumLanguageUrl, quorumStudioUrl } from "./url";
 
-export interface NavSection {
+export interface PageRouteGroup {
 	label: string;
 	Icon: LucideIcon;
-	navs: Nav[];
+	routes: PageRoute[];
 }
 
-export interface Nav {
+export interface PageRoute {
 	name: string;
-	route: string;
+	path: string;
 }
 
+// methods path prefix shorthand
 const mPath = "/docs/methods";
 
-export const navSections: NavSection[] = [
+export const docsRouteGroups: PageRouteGroup[] = [
 	{
 		label: "Introduction",
 		Icon: RabbitIcon,
-		navs: [
-			{
-				name: "Motivation",
-				route: "/docs/motivation",
-			},
-			{
-				name: "Overview",
-				route: "/docs/overview",
-			},
+		routes: [
+			{ name: "Motivation", path: "/docs/motivation" },
+			{ name: "Overview", path: "/docs/overview" },
 		],
 	},
 	{
 		label: "Methods",
 		Icon: SquareFunctionIcon,
-		navs: [
-			{ name: "Color", route: `${mPath}/color` },
-			{ name: "ColorMatrix", route: `${mPath}/color-matrix` },
-			{ name: "Device", route: `${mPath}/device` },
-			{ name: "Display", route: `${mPath}/display` },
-			{ name: "DistanceSensor", route: `${mPath}/distance-sensor` },
-			{ name: "ForceSensor", route: `${mPath}/force-sensor` },
-			{ name: "Light", route: `${mPath}/light` },
-			{ name: "LightMatrix", route: `${mPath}/light-matrix` },
-			{ name: "Motor", route: `${mPath}/motor` },
+		routes: [
+			{ name: "Color", path: `${mPath}/color` },
+			{ name: "ColorMatrix", path: `${mPath}/color-matrix` },
+			{ name: "Device", path: `${mPath}/device` },
+			{ name: "Display", path: `${mPath}/display` },
+			{ name: "DistanceSensor", path: `${mPath}/distance-sensor` },
+			{ name: "ForceSensor", path: `${mPath}/force-sensor` },
+			{ name: "Light", path: `${mPath}/light` },
+			{ name: "LightMatrix", path: `${mPath}/light-matrix` },
+			{ name: "Motor", path: `${mPath}/motor` },
 		],
 	},
 	{
 		label: "Reference",
 		Icon: LinkIcon,
-		navs: [
-			{
-				name: "Quorum Language",
-				route: "https://quorumlanguage.com",
-			},
-			{
-				name: "Quorum Studio",
-				route: "https://quorumlanguage.com/download.html",
-			},
-			{
-				name: "GitHub",
-				route: "https://github.com/qorf",
-			},
+		routes: [
+			{ name: "Quorum Language", path: quorumLanguageUrl },
+			{ name: "Quorum Studio", path: quorumStudioUrl },
+			{ name: "GitHub", path: quorumGithubUrl },
 		],
 	},
 ];
 
-export const headerNavs: Nav[] = [
-	{ name: "Home", route: "/" },
-	{ name: "Docs", route: "/docs/motivation" },
-	{ name: "Methods", route: navSections[1].navs[0].route },
+export const mainRoutes: PageRoute[] = [
+	{ name: "Home", path: "/" },
+	{ name: "Docs", path: docsRouteGroups[0].routes[0].path },
+	{ name: "Methods", path: docsRouteGroups[1].routes[0].path },
+	{ name: "Contributors", path: "/contributors" },
 ];

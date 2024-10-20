@@ -1,3 +1,9 @@
+import NavWrapper from "@/components/navigation/nav-wrapper";
+
 export default function LightPage() {
-	return <div>light</div>;
+	return (
+		<NavWrapper title="Light" headers={[]}>
+			in development
+		</NavWrapper>
+	);
 }

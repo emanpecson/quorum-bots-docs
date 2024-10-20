@@ -1,3 +1,9 @@
+import NavWrapper from "@/components/navigation/nav-wrapper";
+
 export default function DevicePage() {
-	return <div>device</div>;
+	return (
+		<NavWrapper title="Device" headers={[]}>
+			in development
+		</NavWrapper>
+	);
 }

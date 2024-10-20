@@ -1,3 +1,9 @@
+import NavWrapper from "@/components/navigation/nav-wrapper";
+
 export default function ColorMatrixPage() {
-	return <div>color matrix</div>;
+	return (
+		<NavWrapper title="Color Matrix" headers={[]}>
+			in development
+		</NavWrapper>
+	);
 }

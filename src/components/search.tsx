@@ -1,9 +1,6 @@
 "use client";
 
-import { SearchIcon } from "lucide-react";
-import { Input } from "./ui/input";
 import { useState } from "react";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import {
 	Command,
 	CommandEmpty,
@@ -12,14 +9,8 @@ import {
 	CommandItem,
 	CommandList,
 } from "./ui/command";
-import { Nav, NavSection, navSections } from "@/data/routes";
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogTitle,
-	DialogTrigger,
-} from "./ui/dialog";
+import { PageRoute, PageRouteGroup, docsRouteGroups } from "@/data/routes";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -55,20 +46,17 @@ export default function Search() {
 					<CommandList>
 						<CommandEmpty>No page found</CommandEmpty>
 						<CommandGroup>
-							{navSections.map((sec: NavSection, i: number) => (
+							{docsRouteGroups.map((sec: PageRouteGroup, i: number) => (
 								<div key={i}>
-									{sec.navs.map((nav: Nav, j: number) => (
+									{sec.routes.map((route: PageRoute, j: number) => (
 										<CommandItem
 											key={j}
-											value={nav.name}
-											onSelect={() => handleSelect(nav.route)}
+											value={route.name}
+											onSelect={() => handleSelect(route.path)}
 										>
-											<Link
-												href={nav.route}
-												className="flex space-x-2 w-full text-neutral-600"
-											>
+											<Link href={route.path} className="flex space-x-2 w-full text-neutral-600">
 												<sec.Icon size={20} />
-												<p>{nav.name}</p>
+												<p>{route.name}</p>
 											</Link>
 										</CommandItem>
 									))}

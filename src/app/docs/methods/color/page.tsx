@@ -1,3 +1,9 @@
+import NavWrapper from "@/components/navigation/nav-wrapper";
+
 export default function ColorPage() {
-	return <div>color</div>;
+	return (
+		<NavWrapper title="Color" headers={[]}>
+			color
+		</NavWrapper>
+	);
 }

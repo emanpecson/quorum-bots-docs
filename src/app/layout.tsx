@@ -5,9 +5,9 @@ import "@/globals.css";
 import Header from "@/components/layout/header";
 
 export const metadata: Metadata = {
-	title: "Quorum LEGO Spike Library",
+	title: "Quorum LEGO SPIKE Library",
 	description:
-		"Documentation webpage for the LEGO Spike class for the Quorum language",
+		"Documentation webpage for the LEGO SPIKE class and its libraries for the Quorum language",
 };
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,8 +21,12 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={inter.className}>
 				<ThemeProvider attribute="class" defaultTheme="system">
-					<Header />
-					<div>{children}</div>
+					<div className="h-screen w-screen">
+						<Header />
+						<div className="w-full flex justify-center">
+							<div className="w-full max-w-[86rem]">{children}</div>
+						</div>
+					</div>
 				</ThemeProvider>
 			</body>
 		</html>
