@@ -6,7 +6,7 @@ import UnderDevelopment from "@/components/placeholder/under-development";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 
-export default function OverviewPage() {
+export default function ColorPage() {
 	// generate ref map using these names
 	const refMap = useRefMap([]);
 
@@ -14,7 +14,7 @@ export default function OverviewPage() {
 	const headers: ContentHeaderType[] = [];
 
 	return (
-		<NavWrapper title="Overview" description="Under development" headers={headers}>
+		<NavWrapper title="Color" description="Under development" headers={headers}>
 			<Content>
 				<UnderDevelopment />
 			</Content>

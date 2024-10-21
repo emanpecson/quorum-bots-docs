@@ -1,3 +1,9 @@
+import UnderDevelopment from "@/components/placeholder/under-development";
+
 export default function HomePage() {
-	return <div>home page</div>;
+	return (
+		<div className="py-4">
+			<UnderDevelopment />
+		</div>
+	);
 }

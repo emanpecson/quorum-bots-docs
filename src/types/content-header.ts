@@ -4,11 +4,11 @@ export type ContentHeaderType = {
 	id: string;
 	label: string;
 	subheaders: ContentSubheaderType[];
-	ref?: MutableRefObject<HTMLDivElement | null>;
+	ref: MutableRefObject<HTMLDivElement | null>;
 };
 
 export type ContentSubheaderType = {
 	id: string;
 	label: string;
-	ref?: MutableRefObject<HTMLDivElement | null>;
+	ref: MutableRefObject<HTMLDivElement | null>;
 };

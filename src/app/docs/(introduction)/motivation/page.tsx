@@ -7,6 +7,7 @@ import { useRef } from "react";
 import ContentSection from "@/components/content/content-section";
 import ContentSubsection from "@/components/content/content-subsection";
 import Content from "@/components/content/content";
+import UnderDevelopment from "@/components/placeholder/under-development";
 
 export default function MotivationPage() {
 	const header1Ref = useRef<HTMLDivElement | null>(null);
@@ -17,16 +18,16 @@ export default function MotivationPage() {
 
 	const headers: ContentHeaderType[] = [
 		{
-			id: "header1",
+			id: "0",
 			label: "Header 1",
 			ref: header1Ref,
 			subheaders: [
-				{ id: "subheader1", label: "Subheading 1", ref: subheader1Ref },
-				{ id: "subheader2", label: "Subheading 2", ref: subheader2Ref },
+				{ id: "1", label: "Subheading 1", ref: subheader1Ref },
+				{ id: "2", label: "Subheading 2", ref: subheader2Ref },
 			],
 		},
-		{ id: "header2", label: "Header 2", ref: header2Ref, subheaders: [] },
-		{ id: "header3", label: "Header 3", ref: header3Ref, subheaders: [] },
+		{ id: "3", label: "Header 2", ref: header2Ref, subheaders: [] },
+		{ id: "4", label: "Header 3", ref: header3Ref, subheaders: [] },
 	];
 
 	return (
@@ -36,6 +37,8 @@ export default function MotivationPage() {
 			headers={headers}
 		>
 			<Content>
+				<UnderDevelopment />
+
 				<ContentSection header={headers[0]}>
 					<ContentText>
 						Lorem ipsum odor amet, consectetuer adipiscing elit. Malesuada imperdiet cras curae

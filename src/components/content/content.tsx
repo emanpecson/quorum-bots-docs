@@ -3,5 +3,5 @@ interface ContentProps {
 }
 
 export default function Content(props: ContentProps) {
-	return <div className="space-y-14">{props.children}</div>;
+	return <div className="space-y-16">{props.children}</div>;
 }

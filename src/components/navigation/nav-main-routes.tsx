@@ -14,7 +14,7 @@ export default function NavMainRoutes() {
 			{mainRoutes.map((route: PageRoute, i: number) => {
 				const path = pathname.substring(1, pathname.length).split("/");
 				let activePage = "Home";
-				if (path[1] === "methods") activePage = "Methods";
+				if (path[1] === "libraries") activePage = "Libraries";
 				else if (path[0] === "docs") activePage = "Docs";
 				else if (path[0] === "contributors") activePage = "Contributors";
 

@@ -15,11 +15,12 @@ const introductionRouteGroup: PageRouteGroup = {
 	],
 };
 
-const mpath = `${dpath}/methods`;
-const methodsRouteGroup: PageRouteGroup = {
-	label: "Methods",
+const mpath = `${dpath}/libraries`;
+const librariesRouteGroup: PageRouteGroup = {
+	label: "Libraries",
 	Icon: SquareFunctionIcon,
 	routes: [
+		{ name: "Button", path: `${mpath}/button` },
 		{ name: "Color", path: `${mpath}/color` },
 		{ name: "ColorMatrix", path: `${mpath}/color-matrix` },
 		{ name: "Device", path: `${mpath}/device` },
@@ -44,16 +45,16 @@ const referenceRouteGroup: PageRouteGroup = {
 
 // ----- linking route groups ----- //
 
-introductionRouteGroup.nextGroup = methodsRouteGroup;
-methodsRouteGroup.prevGroup = introductionRouteGroup;
-methodsRouteGroup.nextGroup = referenceRouteGroup;
-referenceRouteGroup.prevGroup = methodsRouteGroup;
+introductionRouteGroup.nextGroup = librariesRouteGroup;
+librariesRouteGroup.prevGroup = introductionRouteGroup;
+librariesRouteGroup.nextGroup = referenceRouteGroup;
+referenceRouteGroup.prevGroup = librariesRouteGroup;
 
 // ----- all doc route groups ----- //
 
 export const docsRouteGroups: PageRouteGroup[] = [
 	introductionRouteGroup,
-	methodsRouteGroup,
+	librariesRouteGroup,
 	referenceRouteGroup,
 ];
 
@@ -62,6 +63,6 @@ export const docsRouteGroups: PageRouteGroup[] = [
 export const mainRoutes: PageRoute[] = [
 	{ name: "Home", path: "/" },
 	{ name: "Docs", path: docsRouteGroups[0].routes[0].path },
-	{ name: "Methods", path: docsRouteGroups[1].routes[0].path },
+	{ name: "Libraries", path: docsRouteGroups[1].routes[0].path },
 	{ name: "Contributors", path: "/contributors" },
 ];
