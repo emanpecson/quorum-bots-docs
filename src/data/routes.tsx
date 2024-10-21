@@ -1,54 +1,63 @@
-import { LinkIcon, LucideIcon, RabbitIcon, SquareFunctionIcon } from "lucide-react";
+import { LinkIcon, RabbitIcon, SquareFunctionIcon } from "lucide-react";
 import { quorumGithubUrl, quorumLanguageUrl, quorumStudioUrl } from "./url";
+import type { PageRoute, PageRouteGroup } from "@/types/page-route";
 
-export interface PageRouteGroup {
-	label: string;
-	Icon: LucideIcon;
-	routes: PageRoute[];
-}
+// ----- defined docs route groups ----- //
 
-export interface PageRoute {
-	name: string;
-	path: string;
-}
+const dpath = "/docs";
+const introductionRouteGroup: PageRouteGroup = {
+	label: "Introduction",
+	Icon: RabbitIcon,
+	routes: [
+		{ name: "Motivation", path: `${dpath}/motivation` },
+		{ name: "Overview", path: `${dpath}/overview` },
+		{ name: "Getting Started", path: `${dpath}/getting-started` },
+	],
+};
 
-// methods path prefix shorthand
-const mPath = "/docs/methods";
+const mpath = `${dpath}/methods`;
+const methodsRouteGroup: PageRouteGroup = {
+	label: "Methods",
+	Icon: SquareFunctionIcon,
+	routes: [
+		{ name: "Color", path: `${mpath}/color` },
+		{ name: "ColorMatrix", path: `${mpath}/color-matrix` },
+		{ name: "Device", path: `${mpath}/device` },
+		{ name: "Display", path: `${mpath}/display` },
+		{ name: "DistanceSensor", path: `${mpath}/distance-sensor` },
+		{ name: "ForceSensor", path: `${mpath}/force-sensor` },
+		{ name: "Light", path: `${mpath}/light` },
+		{ name: "LightMatrix", path: `${mpath}/light-matrix` },
+		{ name: "Motor", path: `${mpath}/motor` },
+	],
+};
+
+const referenceRouteGroup: PageRouteGroup = {
+	label: "Reference",
+	Icon: LinkIcon,
+	routes: [
+		{ name: "Quorum Language", path: quorumLanguageUrl },
+		{ name: "Quorum Studio", path: quorumStudioUrl },
+		{ name: "GitHub", path: quorumGithubUrl },
+	],
+};
+
+// ----- linking route groups ----- //
+
+introductionRouteGroup.nextGroup = methodsRouteGroup;
+methodsRouteGroup.prevGroup = introductionRouteGroup;
+methodsRouteGroup.nextGroup = referenceRouteGroup;
+referenceRouteGroup.prevGroup = methodsRouteGroup;
+
+// ----- all doc route groups ----- //
 
 export const docsRouteGroups: PageRouteGroup[] = [
-	{
-		label: "Introduction",
-		Icon: RabbitIcon,
-		routes: [
-			{ name: "Motivation", path: "/docs/motivation" },
-			{ name: "Overview", path: "/docs/overview" },
-		],
-	},
-	{
-		label: "Methods",
-		Icon: SquareFunctionIcon,
-		routes: [
-			{ name: "Color", path: `${mPath}/color` },
-			{ name: "ColorMatrix", path: `${mPath}/color-matrix` },
-			{ name: "Device", path: `${mPath}/device` },
-			{ name: "Display", path: `${mPath}/display` },
-			{ name: "DistanceSensor", path: `${mPath}/distance-sensor` },
-			{ name: "ForceSensor", path: `${mPath}/force-sensor` },
-			{ name: "Light", path: `${mPath}/light` },
-			{ name: "LightMatrix", path: `${mPath}/light-matrix` },
-			{ name: "Motor", path: `${mPath}/motor` },
-		],
-	},
-	{
-		label: "Reference",
-		Icon: LinkIcon,
-		routes: [
-			{ name: "Quorum Language", path: quorumLanguageUrl },
-			{ name: "Quorum Studio", path: quorumStudioUrl },
-			{ name: "GitHub", path: quorumGithubUrl },
-		],
-	},
+	introductionRouteGroup,
+	methodsRouteGroup,
+	referenceRouteGroup,
 ];
+
+// ----- main routes ----- //
 
 export const mainRoutes: PageRoute[] = [
 	{ name: "Home", path: "/" },

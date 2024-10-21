@@ -3,8 +3,8 @@ import { ThemeToggle } from "../button/theme-toggle";
 import Search from "../search";
 import { metadata } from "@/app/layout";
 import Link from "next/link";
-import { mainRoutes, PageRoute } from "@/data/routes";
 import { quorumLogoUrl } from "@/data/url";
+import NavMainRoutes from "../navigation/nav-main-routes";
 
 export default function Header() {
 	return (
@@ -23,15 +23,7 @@ export default function Header() {
 						<h1 className="text-lg font-medium text-nowrap">{metadata.title as string}</h1>
 					</Link>
 
-					<div className="flex space-x-4 place-items-center text-sm">
-						{mainRoutes.map((route: PageRoute, i: number) => {
-							return (
-								<Link key={i} href={route.path}>
-									{route.name}
-								</Link>
-							);
-						})}
-					</div>
+					<NavMainRoutes />
 				</div>
 
 				{/* search + header buttons */}

@@ -9,11 +9,12 @@ import {
 	CommandItem,
 	CommandList,
 } from "./ui/command";
-import { PageRoute, PageRouteGroup, docsRouteGroups } from "@/data/routes";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import type { PageRoute, PageRouteGroup } from "@/types/page-route";
+import { docsRouteGroups } from "@/data/routes";
 
 export default function Search() {
 	const router = useRouter();

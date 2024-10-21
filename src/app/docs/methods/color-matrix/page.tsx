@@ -2,7 +2,7 @@ import NavWrapper from "@/components/navigation/nav-wrapper";
 
 export default function ColorMatrixPage() {
 	return (
-		<NavWrapper title="Color Matrix" headers={[]}>
+		<NavWrapper title="Color Matrix" description="" headers={[]}>
 			in development
 		</NavWrapper>
 	);

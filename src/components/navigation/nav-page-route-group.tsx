@@ -1,18 +1,18 @@
 "use client";
 
-import { PageRoute, PageRouteGroup as PageRouteGroupType } from "@/data/routes";
+import type { PageRoute, PageRouteGroup } from "@/types/page-route";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface PageRouteGroupProps {
-	group: PageRouteGroupType;
+interface NavPageRouteGroupProps {
+	group: PageRouteGroup;
 }
 
-export default function PageRouteGroup(props: PageRouteGroupProps) {
+export default function NavPageRouteGroup(props: NavPageRouteGroupProps) {
 	const pathname = usePathname();
 	return (
-		<div className="px-2 py-4 space-y-4">
+		<div className="space-y-4">
 			<div className="flex space-x-2 place-items-center text-neutral-600 dark:text-neutral-100">
 				<props.group.Icon
 					size={props.group.label === "Reference" ? 20 : 24}
