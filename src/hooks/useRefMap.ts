@@ -17,6 +17,7 @@ export const useRefMap = (refNames: string[]) => {
 
 	// map each name
 	for (const name of refNames) {
+		// eslint-disable-next-line react-hooks/rules-of-hooks
 		map[name] = useRef<HTMLDivElement | null>(null);
 	}
 	return map;
