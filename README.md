@@ -6,7 +6,7 @@ Next:
 
 1. clone repository: [lego-spike-docs](https://github.com/emanpecson/lego-spike-docs)
 2. run `npm install` in the terminal
-3. run `nom run dev` and open `localhost:3000` on a browser
+3. run `npm run dev` and open `localhost:3000` on a browser
 4. click on `Docs` button in the header to get to our Documentation page
 
 ### Ways to contribute
@@ -65,10 +65,10 @@ const refMap = useRefMap([
 #### `2. headers`
 
 - This is where define headers that make up our documentation structure.
-- `headers` is a list of objects, where each header object should be defined as follows:
+- `headers` is a list of objects, where each header object could be defined in 2 ways:
 
 ```ts
-// without subheaders
+// 1: w/o subheaders
 {
   id: string;
   label: string;
@@ -76,7 +76,7 @@ const refMap = useRefMap([
   subheaders: [];
 }
 
-// or w/ subheaders
+// 2: or w/ subheaders
 {
   id: string;
   label: string;
@@ -103,7 +103,7 @@ const headers: ContentHeaderType[] = [
   {
     id: "0",
     label: "Constants",
-    ref: refMap.constants,
+    ref: refMap.constants, // notice how "constants" is the name we set in refMap...
     subheaders: [],
   },
   {
@@ -144,7 +144,7 @@ These are some components you might be using when documenting:
 	- Example:
 		```tsx
 		<NavWrapper
-      title="Distance Sensor"
+		  title="Distance Sensor"
 		  description="Blah blah blah"
 		  headers={headers} // variable `headers` defined earlier
 		>
@@ -183,7 +183,7 @@ These are some components you might be using when documenting:
 #### `<ContentSubsection></ContentSubsection>`
   - Defines a sub-section to hold the subheader and its content
   - Should only be used inside `ContentSection` tags
-  - Takes a property `subheader` (which we can acces from `headers`)
+  - Takes a property `subheader` (which we can acces from `headers[i].subheaders[j]`)
 	- Example:
 		```tsx
 		<NavWrapper>
@@ -278,8 +278,10 @@ These are some components you might be using when documenting:
 		    <ContentSection header={headers[0]}>
 		      <Constants
 		        constants={[
-		          { type: "integer", identifier: "LEFT", value: "0" },
-		          { type: "integer", identifier: "RIGHT", value: "1" },
+		          { type: "integer", identifier: "UP", value: "0" },
+		          { type: "integer", identifier: "DOWN", value: "1" },
+		          { type: "integer", identifier: "LEFT", value: "3" },
+		          { type: "integer", identifier: "RIGHT", value: "4" },
 		        ]}
 		      />
 		    </ContentSection>
@@ -291,8 +293,7 @@ These are some components you might be using when documenting:
 
 Please reference [`src/app/docs/libraries/button/page.tsx`](https://github.com/emanpecson/lego-spike-docs/blob/main/src/app/docs/libraries/button/page.tsx) as an example for setting up documentation. It pretty much just copies over the documentation comments from the Quorum Language library implementation and puts it in here, so if you follow along, providing documentation to our web-page as a beginner to web-development should be doable.
 
-Here's a simple documentation structure you can follow:
-
+Here's one library documentation structure you can follow:
 - header for constants (if there are any)
 - header for each class method
   - subheader for its return type
@@ -404,7 +405,7 @@ Consists of `page.tsx` files here: [`src/app/docs/libraries/{library-name}/page.
 
 ### Adding a "main" page
 
-Go to `src/data/routes.tsx` and look for `mainRoutes`. These are pages that make up the "main routes" of the webpage we can be seen in the header navigation section. If you would like to add a new main page. Follow the next steps:
+Go to `src/data/routes.tsx` and look for `mainRoutes`. These are pages that make up the "main routes" of the webpage that can be seen in the header navigation section. If you would like to add a new main page. Follow the next steps:
 
 #### Steps:
 1. Create a folder under `src/app/` which will represent the name of your page.
