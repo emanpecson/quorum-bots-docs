@@ -97,7 +97,7 @@ export default function NavWrapper(props: NavWrapperProps) {
 				}
 			});
 		});
-	}, []);
+	}, [pathname]);
 
 	return (
 		<div className="flex h-screen pt-16">
