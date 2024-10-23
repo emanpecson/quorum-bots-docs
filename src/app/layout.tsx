@@ -1,14 +1,7 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import "@/globals.css";
 import Header from "@/components/layout/header";
-
-export const metadata: Metadata = {
-	title: "Quorum LEGO SPIKE Library",
-	description:
-		"Documentation webpage for the LEGO SPIKE class and its libraries for the Quorum language",
-};
 
 const inter = Inter({ subsets: ["latin"] });
 

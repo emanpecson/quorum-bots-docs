@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import { ThemeToggle } from "../button/theme-toggle";
 import Search from "../search";
-import { metadata } from "@/app/layout";
 import Link from "next/link";
 import { quorumLogoUrl } from "@/data/url";
 import NavMainRoutes from "../navigation/nav-main-routes";
+import { usePathname } from "next/navigation";
+import { metadata } from "@/data/metadata";
 
 export default function Header() {
+	const pathname = usePathname();
+
 	return (
 		<div className="h-16 w-full border-b flex justify-center place-items-center fixed backdrop-blur-md top-0">
 			<div className="flex justify-between place-items-center w-full max-w-[86rem]">
@@ -28,7 +33,7 @@ export default function Header() {
 
 				{/* search + header buttons */}
 				<div className="flex place-items-center space-x-4">
-					<Search />
+					{pathname !== "/" && <Search hideInPath="/" />}
 					<ThemeToggle />
 				</div>
 			</div>

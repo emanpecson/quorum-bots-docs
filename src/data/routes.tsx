@@ -61,7 +61,6 @@ export const docsRouteGroups: PageRouteGroup[] = [
 // ----- main routes ----- //
 
 export const mainRoutes: PageRoute[] = [
-	{ name: "Home", path: "/" },
 	{ name: "Docs", path: docsRouteGroups[0].routes[0].path },
 	{ name: "Libraries", path: docsRouteGroups[1].routes[0].path },
 	{ name: "Contributors", path: "/contributors" },

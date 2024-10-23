@@ -13,7 +13,7 @@ export default function NavMainRoutes() {
 		<div className="flex space-x-4 place-items-center text-sm">
 			{mainRoutes.map((route: PageRoute, i: number) => {
 				const path = pathname.substring(1, pathname.length).split("/");
-				let activePage = "Home";
+				let activePage = "";
 				if (path[1] === "libraries") activePage = "Libraries";
 				else if (path[0] === "docs") activePage = "Docs";
 				else if (path[0] === "contributors") activePage = "Contributors";
