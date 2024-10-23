@@ -30,6 +30,8 @@ const librariesRouteGroup: PageRouteGroup = {
 		{ name: "Light", path: `${mpath}/light` },
 		{ name: "LightMatrix", path: `${mpath}/light-matrix` },
 		{ name: "Motor", path: `${mpath}/motor` },
+		{ name: "Hub", path: `${mpath}/hub` },
+		{ name: "Sound", path: `${mpath}/sound` },
 	],
 };
 
