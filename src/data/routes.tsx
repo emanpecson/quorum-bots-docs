@@ -15,23 +15,23 @@ const introductionRouteGroup: PageRouteGroup = {
 	],
 };
 
-const mpath = `${dpath}/libraries`;
+const lpath = `${dpath}/libraries`;
 const librariesRouteGroup: PageRouteGroup = {
 	label: "Libraries",
 	Icon: SquareFunctionIcon,
 	routes: [
-		{ name: "Button", path: `${mpath}/button` },
-		{ name: "Color", path: `${mpath}/color` },
-		{ name: "ColorMatrix", path: `${mpath}/color-matrix` },
-		{ name: "Device", path: `${mpath}/device` },
-		{ name: "Display", path: `${mpath}/display` },
-		{ name: "DistanceSensor", path: `${mpath}/distance-sensor` },
-		{ name: "ForceSensor", path: `${mpath}/force-sensor` },
-		{ name: "Light", path: `${mpath}/light` },
-		{ name: "LightMatrix", path: `${mpath}/light-matrix` },
-		{ name: "Motor", path: `${mpath}/motor` },
-		{ name: "Hub", path: `${mpath}/hub` },
-		{ name: "Sound", path: `${mpath}/sound` },
+		{ name: "Button", path: `${lpath}/button` },
+		{ name: "Color", path: `${lpath}/color` },
+		{ name: "ColorMatrix", path: `${lpath}/color-matrix` },
+		{ name: "Device", path: `${lpath}/device` },
+		{ name: "Display", path: `${lpath}/display` },
+		{ name: "DistanceSensor", path: `${lpath}/distance-sensor` },
+		{ name: "ForceSensor", path: `${lpath}/force-sensor` },
+		{ name: "Hub", path: `${lpath}/hub` },
+		{ name: "Light", path: `${lpath}/light` },
+		{ name: "LightMatrix", path: `${lpath}/light-matrix` },
+		{ name: "Motor", path: `${lpath}/motor` },
+		{ name: "Sound", path: `${lpath}/sound` },
 	],
 };
 

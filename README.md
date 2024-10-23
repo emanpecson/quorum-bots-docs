@@ -400,7 +400,7 @@ Consists of `page.tsx` files here: [`src/app/docs/libraries/{library-name}/page.
 5. Go to `src/data/routes.tsx` file and look for a variable called `librariesRouteGroup`
 6. Update the `.routes` attribute by adding an object of the following structure:
 	`{ name: string, path: string; }`
-	- i.e. ``{ name: "My Page", path: `${mpath}/my-page` }``
+	- i.e. ``{ name: "My Page", path: `${lpath}/my-page` }``
 7. You're done! You can now either edit the file yourself or leave it for someone to contribute to.
 
 ### Adding a "main" page

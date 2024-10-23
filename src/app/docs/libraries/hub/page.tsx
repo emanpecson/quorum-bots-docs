@@ -5,19 +5,18 @@ import UnderDevelopment from "@/components/placeholder/under-development";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 
-// ! update page name
 export default function HubPage() {
-  // generate ref map using these names
-  const refMap = useRefMap([]);
+	// generate ref map using these names
+	const refMap = useRefMap([]);
 
-  // define content headers
-  const headers: ContentHeaderType[] = [];
+	// define content headers
+	const headers: ContentHeaderType[] = [];
 
-  return (
-    <NavWrapper title="Hub Page" description="Under development" headers={headers}>
-      <Content>
-        <UnderDevelopment />
-      </Content>
-    </NavWrapper>
-  );
+	return (
+		<NavWrapper title="Hub" description="Under development" headers={headers}>
+			<Content>
+				<UnderDevelopment />
+			</Content>
+		</NavWrapper>
+	);
 }
