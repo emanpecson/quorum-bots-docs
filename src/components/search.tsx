@@ -26,7 +26,7 @@ export default function Search(props: SearchProps) {
 	const router = useRouter();
 
 	const [isOpen, setIsOpen] = useState(false);
-	const isMac = navigator.userAgent.toLowerCase().includes("mac");
+	const isMac = navigator && navigator.userAgent.toLowerCase().includes("mac");
 
 	const handleSelect = (route: string) => {
 		setIsOpen(false);

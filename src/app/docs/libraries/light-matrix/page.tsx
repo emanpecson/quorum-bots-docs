@@ -176,7 +176,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[1]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[1].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -235,7 +235,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[3]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[3].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -271,7 +271,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[4]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[4].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -298,7 +298,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[5]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[5].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -325,7 +325,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[6]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[6].subheaders[0]}>
-						<MethodReturns type="">None: Sets the intensity of all pixels to 0</MethodReturns>
+						<MethodReturns type={null}>Sets the intensity of all pixels to 0</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}

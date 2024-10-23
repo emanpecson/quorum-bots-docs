@@ -127,7 +127,7 @@ export default function ForceSensorPage() {
 				<ContentSection header={headers[1]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[1].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}

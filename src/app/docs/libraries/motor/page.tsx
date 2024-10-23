@@ -280,7 +280,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[1]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[1].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -327,7 +327,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[3]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[3].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -372,7 +372,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[5]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[5].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -417,7 +417,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[7]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[7].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -444,7 +444,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[8]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[8].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -477,7 +477,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[9]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[9].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -509,7 +509,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[10]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[10].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -542,7 +542,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[11]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[11].subheaders[0]}>
-						<MethodReturns type="">None</MethodReturns>
+						<MethodReturns type={null} />
 					</ContentSubsection>
 
 					{/* sub-section: params */}
@@ -574,7 +574,7 @@ export default function MotorPage() {
 				<ContentSection header={headers[12]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[12].subheaders[0]}>
-						<MethodReturns type="">None: Is used to stop the motor from running.</MethodReturns>
+						<MethodReturns type={null}>Is used to stop the motor from running.</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
