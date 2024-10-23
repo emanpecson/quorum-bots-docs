@@ -4,23 +4,31 @@ import Content from "@/components/content/content";
 import ContentCode from "@/components/content/content-code";
 import ContentSection from "@/components/content/content-section";
 import ContentSubsection from "@/components/content/content-subsection";
-import Constants from "@/components/library/constants";
 import MethodParams from "@/components/library/method-params";
 import MethodReturns from "@/components/library/method-returns";
 import NavWrapper from "@/components/navigation/nav-wrapper";
-import { GetPortEx, SetPortEx, GetDutyCycleEx, SetDutyCycleEx, 
-		 GetRelativePositionEx, SetRelativePositionEx, GetAbsolutePositionEx,
-		 RunEx, RunForTimeEx, RunToDegreesEx, RunToRelativePositionEx, RunToAbsolutePositionEx,
-		StopEx, GetVelocityEx } from "@/data/libraries/motor";
-import UnderDevelopment from "@/components/placeholder/under-development";
+import {
+	GetPortEx,
+	SetPortEx,
+	GetDutyCycleEx,
+	SetDutyCycleEx,
+	GetRelativePositionEx,
+	SetRelativePositionEx,
+	GetAbsolutePositionEx,
+	RunEx,
+	RunForTimeEx,
+	RunToDegreesEx,
+	RunToRelativePositionEx,
+	RunToAbsolutePositionEx,
+	StopEx,
+	GetVelocityEx,
+} from "@/data/libraries/motor";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 
 export default function MotorPage() {
 	// generate ref map using these names
 	const refMap = useRefMap([
-		"constants",
-
 		"GetPort",
 		"GetPortRet",
 		"GetPortParams",
@@ -40,7 +48,7 @@ export default function MotorPage() {
 		"GetDutyCycleRet",
 		"GetDutyCycleParams",
 		"GetDutyCycleEx",
-		
+
 		"GetRelativePosition",
 		"GetRelativePositionRet",
 		"GetRelativePositionParams",
@@ -94,12 +102,6 @@ export default function MotorPage() {
 
 	// define content headers
 	const headers: ContentHeaderType[] = [
-		{
-			id: "0",
-			label: "Constants",
-			ref: refMap.constants,
-			subheaders: [],
-		},
 		{
 			id: "1",
 			label: "GetPort()",
@@ -243,9 +245,9 @@ export default function MotorPage() {
 	];
 
 	return (
-		<NavWrapper 
-		title="Motor" 
-		description="The motor is an external device that is connected to the hub through a port.
+		<NavWrapper
+			title="Motor"
+			description="The motor is an external device that is connected to the hub through a port.
     It is a rotational device that can be attached to other objects to provide force. The motor library has various functions
 	that can set the port of the motor, control the motor to run for some specified parameters, and get some data abour the motor. 
 	Ranges for velocity vary per motor size as follows:
@@ -253,316 +255,358 @@ export default function MotorPage() {
 	Small motor: -660 to 660,
 	Medium motor: -1110 to 1110,
 	Large motor: -1050 to 1050"
-		headers={headers}>
+			headers={headers}
+		>
 			<Content>
 				{/* section: GetPort() */}
-				<ContentSection header={headers[1]}>
+				<ContentSection header={headers[0]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[1].subheaders[0]}>
-						<MethodReturns type="integer">
-							Returns the port number of the motor
-						</MethodReturns>
+					<ContentSubsection subheader={headers[0].subheaders[0]}>
+						<MethodReturns type="integer">Returns the port number of the motor</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[1].subheaders[1]}>
+					<ContentSubsection subheader={headers[0].subheaders[1]}>
 						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[1].subheaders[2]}>
+					<ContentSubsection subheader={headers[0].subheaders[2]}>
 						<ContentCode code={GetPortEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: SetPort() */}
-				<ContentSection header={headers[2]}>
+				<ContentSection header={headers[1]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[2].subheaders[0]}>
-						<MethodReturns type="">
-							None
-						</MethodReturns>
+					<ContentSubsection subheader={headers[1].subheaders[0]}>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[2].subheaders[1]}>
-						<MethodParams params={[
-								{ type: "integer", identifier: "port", description: "The port (0 through 5) the motor is attached to and what port number the motor object will be set to" },
-							]} />
+					<ContentSubsection subheader={headers[1].subheaders[1]}>
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "port",
+									description:
+										"The port (0 through 5) the motor is attached to and what port number the motor object will be set to",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[2].subheaders[2]}>
+					<ContentSubsection subheader={headers[1].subheaders[2]}>
 						<ContentCode code={SetPortEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: GetDutyCycle() */}
-				<ContentSection header={headers[3]}>
+				<ContentSection header={headers[2]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[3].subheaders[0]}>
+					<ContentSubsection subheader={headers[2].subheaders[0]}>
 						<MethodReturns type="integer">
-						Returns the current duty cycle (pwm) of the motor
+							Returns the current duty cycle (pwm) of the motor
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[3].subheaders[1]}>
-						<MethodParams
-							params={[]}
-						/>
+					<ContentSubsection subheader={headers[2].subheaders[1]}>
+						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[3].subheaders[2]}>
+					<ContentSubsection subheader={headers[2].subheaders[2]}>
 						<ContentCode code={GetDutyCycleEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: SetDutyCycle() */}
-				<ContentSection header={headers[4]}>
+				<ContentSection header={headers[3]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[4].subheaders[0]}>
-						<MethodReturns type="">
-						None
-						</MethodReturns>
+					<ContentSubsection subheader={headers[3].subheaders[0]}>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[4].subheaders[1]}>
-					<MethodParams params={[
-								{ type: "integer", identifier: "pulseWidthModulation", description: "The pulse width modulation, from -10000 - 10000, that will be used to start this motor with" },
-							]} />
+					<ContentSubsection subheader={headers[3].subheaders[1]}>
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "pulseWidthModulation",
+									description:
+										"The pulse width modulation, from -10000 - 10000, that will be used to start this motor with",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[4].subheaders[2]}>
+					<ContentSubsection subheader={headers[3].subheaders[2]}>
 						<ContentCode code={SetDutyCycleEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: GetRelativePosition() */}
-				<ContentSection header={headers[5]}>
+				<ContentSection header={headers[4]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[5].subheaders[0]}>
-						<MethodReturns type="integer">
-						Returns the relative position of a motor
-						</MethodReturns>
+					<ContentSubsection subheader={headers[4].subheaders[0]}>
+						<MethodReturns type="integer">Returns the relative position of a motor</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[5].subheaders[1]}>
-						<MethodParams
-							params={[]}
-						/>
+					<ContentSubsection subheader={headers[4].subheaders[1]}>
+						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[5].subheaders[2]}>
+					<ContentSubsection subheader={headers[4].subheaders[2]}>
 						<ContentCode code={GetRelativePositionEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: SetRelativePosition() */}
-				<ContentSection header={headers[6]}>
+				<ContentSection header={headers[5]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[6].subheaders[0]}>
-						<MethodReturns type="">
-						None
-						</MethodReturns>
+					<ContentSubsection subheader={headers[5].subheaders[0]}>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[6].subheaders[1]}>
-					<MethodParams params={[
-								{ type: "integer", identifier: "position", description: "The relative position that will be used to change the position used as an offset for RunToRelativePosition()" },
-							]} />
+					<ContentSubsection subheader={headers[5].subheaders[1]}>
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "position",
+									description:
+										"The relative position that will be used to change the position used as an offset for RunToRelativePosition()",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[6].subheaders[2]}>
+					<ContentSubsection subheader={headers[5].subheaders[2]}>
 						<ContentCode code={SetRelativePositionEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: GetAbsolutePosition() */}
-				<ContentSection header={headers[7]}>
+				<ContentSection header={headers[6]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[7].subheaders[0]}>
-						<MethodReturns type="integer">
-						Returns the relative position of a motor
-						</MethodReturns>
+					<ContentSubsection subheader={headers[6].subheaders[0]}>
+						<MethodReturns type="integer">Returns the relative position of a motor</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[7].subheaders[1]}>
-					<MethodParams params={[]} />
+					<ContentSubsection subheader={headers[6].subheaders[1]}>
+						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[7].subheaders[2]}>
+					<ContentSubsection subheader={headers[6].subheaders[2]}>
 						<ContentCode code={GetAbsolutePositionEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: Run() */}
+				<ContentSection header={headers[7]}>
+					{/* sub-section: returns */}
+					<ContentSubsection subheader={headers[7].subheaders[0]}>
+						<MethodReturns type="">None</MethodReturns>
+					</ContentSubsection>
+
+					{/* sub-section: params */}
+					<ContentSubsection subheader={headers[7].subheaders[1]}>
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "velocity",
+									description:
+										"The velocity, in degrees per second, that the motor will be started with. ",
+								},
+							]}
+						/>
+					</ContentSubsection>
+
+					{/* sub-section: example */}
+					<ContentSubsection subheader={headers[7].subheaders[2]}>
+						<ContentCode code={RunEx} showLineNumbers />
+					</ContentSubsection>
+				</ContentSection>
+
+				{/* section: RunForTime() */}
 				<ContentSection header={headers[8]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[8].subheaders[0]}>
-						<MethodReturns type="">
-						None
-						</MethodReturns>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
 					<ContentSubsection subheader={headers[8].subheaders[1]}>
-					<MethodParams params={[
-								{ type: "integer", identifier: "velocity", description: "The velocity, in degrees per second, that the motor will be started with. " },
-							]} />
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "time",
+									description:
+										"The time, in miliseconds, that the motor will run for with the given velocity.",
+								},
+								{
+									type: "integer",
+									identifier: "velocity",
+									description:
+										"The velocity, in degrees per second, that the motor will be started with.",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
 					<ContentSubsection subheader={headers[8].subheaders[2]}>
-						<ContentCode code={RunEx} showLineNumbers />
+						<ContentCode code={RunForTimeEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
-				
-				
-				{/* section: RunForTime() */}
+
+				{/* section: RunToDegrees() */}
 				<ContentSection header={headers[9]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[9].subheaders[0]}>
-						<MethodReturns type="">
-						None
-						</MethodReturns>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
 					<ContentSubsection subheader={headers[9].subheaders[1]}>
-					<MethodParams params={[
-								{ type: "integer", identifier: "time", description: "The time, in miliseconds, that the motor will run for with the given velocity." },
-								{ type: "integer", identifier: "velocity", description: "The velocity, in degrees per second, that the motor will be started with." },
-							]} />
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "degrees",
+									description: "The degrees that the motor will run for with the given velocity.",
+								},
+								{
+									type: "integer",
+									identifier: "velocity",
+									description:
+										"The velocity, in degrees per second, that the motor will be started with.",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
 					<ContentSubsection subheader={headers[9].subheaders[2]}>
-						<ContentCode code={RunForTimeEx} showLineNumbers />
-					</ContentSubsection>
-				</ContentSection>
-				
-				{/* section: RunToDegrees() */}
-				<ContentSection header={headers[10]}>
-					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[10].subheaders[0]}>
-						<MethodReturns type="">
-						None
-						</MethodReturns>
-					</ContentSubsection>
-
-					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[10].subheaders[1]}>
-					<MethodParams params={[
-								{ type: "integer", identifier: "degrees", description: "The degrees that the motor will run for with the given velocity." },
-								{ type: "integer", identifier: "velocity", description: "The velocity, in degrees per second, that the motor will be started with." },
-							]} />
-					</ContentSubsection>
-
-					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[10].subheaders[2]}>
 						<ContentCode code={RunToDegreesEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: RunToRelativePosition() */}
-				<ContentSection header={headers[11]}>
+				<ContentSection header={headers[10]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[11].subheaders[0]}>
-						<MethodReturns type="">
-						None
-						</MethodReturns>
+					<ContentSubsection subheader={headers[10].subheaders[0]}>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[11].subheaders[1]}>
-					<MethodParams params={[
-								{ type: "integer", identifier: "position", description: "The position that the motor will use to turn to relative to the current position." },
-								{ type: "integer", identifier: "velocity", description: "The velocity, in degrees per second, that the motor will be started with." },
-							]} />
+					<ContentSubsection subheader={headers[10].subheaders[1]}>
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "position",
+									description:
+										"The position that the motor will use to turn to relative to the current position.",
+								},
+								{
+									type: "integer",
+									identifier: "velocity",
+									description:
+										"The velocity, in degrees per second, that the motor will be started with.",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[11].subheaders[2]}>
+					<ContentSubsection subheader={headers[10].subheaders[2]}>
 						<ContentCode code={RunToRelativePositionEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: RunToAbsolutePosition() */}
-				<ContentSection header={headers[12]}>
+				<ContentSection header={headers[11]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[12].subheaders[0]}>
-						<MethodReturns type="">
-						None
-						</MethodReturns>
+					<ContentSubsection subheader={headers[11].subheaders[0]}>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[12].subheaders[1]}>
-					<MethodParams params={[
-								{ type: "integer", identifier: "position", description: "The absolute position that the motor will use to turn to." },
-								{ type: "integer", identifier: "velocity", description: "The velocity, in degrees per second, that the motor will be started with." },
-							]} />
+					<ContentSubsection subheader={headers[11].subheaders[1]}>
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "position",
+									description: "The absolute position that the motor will use to turn to.",
+								},
+								{
+									type: "integer",
+									identifier: "velocity",
+									description:
+										"The velocity, in degrees per second, that the motor will be started with.",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[12].subheaders[2]}>
+					<ContentSubsection subheader={headers[11].subheaders[2]}>
 						<ContentCode code={RunToAbsolutePositionEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: Stop() */}
+				<ContentSection header={headers[12]}>
+					{/* sub-section: returns */}
+					<ContentSubsection subheader={headers[12].subheaders[0]}>
+						<MethodReturns type="">None: Is used to stop the motor from running.</MethodReturns>
+					</ContentSubsection>
+
+					{/* sub-section: params */}
+					<ContentSubsection subheader={headers[12].subheaders[1]}>
+						<MethodParams params={[]} />
+					</ContentSubsection>
+
+					{/* sub-section: example */}
+					<ContentSubsection subheader={headers[12].subheaders[2]}>
+						<ContentCode code={StopEx} showLineNumbers />
+					</ContentSubsection>
+				</ContentSection>
+
+				{/* section: GetVelocity() */}
 				<ContentSection header={headers[13]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[13].subheaders[0]}>
-						<MethodReturns type="">
-						None: Is used to stop the motor from running.
+						<MethodReturns type="integer">
+							Returns the velocity in degrees/second of the motor
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
 					<ContentSubsection subheader={headers[13].subheaders[1]}>
-					<MethodParams params={[
-							]} />
+						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
 					<ContentSubsection subheader={headers[13].subheaders[2]}>
-						<ContentCode code={StopEx} showLineNumbers />
-					</ContentSubsection>
-				</ContentSection>
-
-
-				{/* section: GetVelocity() */}
-				<ContentSection header={headers[14]}>
-					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[14].subheaders[0]}>
-						<MethodReturns type="integer">
-						Returns the velocity in degrees/second of the motor
-						</MethodReturns>
-					</ContentSubsection>
-
-					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[14].subheaders[1]}>
-					<MethodParams params={[
-							]} />
-					</ContentSubsection>
-
-					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[14].subheaders[2]}>
 						<ContentCode code={GetVelocityEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
-
 			</Content>
 		</NavWrapper>
 	);

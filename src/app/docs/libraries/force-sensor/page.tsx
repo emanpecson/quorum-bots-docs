@@ -5,18 +5,21 @@ import NavWrapper from "@/components/navigation/nav-wrapper";
 import ContentCode from "@/components/content/content-code";
 import ContentSection from "@/components/content/content-section";
 import ContentSubsection from "@/components/content/content-subsection";
-import Constants from "@/components/library/constants";
 import MethodParams from "@/components/library/method-params";
 import MethodReturns from "@/components/library/method-returns";
-import { GetPortEx, SetPortEx, GetForceEx, GetForceRawEx, IsPressedEx } from "@/data/libraries/force-sensor";
+import {
+	GetPortEx,
+	SetPortEx,
+	GetForceEx,
+	GetForceRawEx,
+	IsPressedEx,
+} from "@/data/libraries/force-sensor";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 
 export default function ForceSensorPage() {
 	// generate ref map using these names
 	const refMap = useRefMap([
-		"constants",
-
 		"GetPort",
 		"GetPortRet",
 		"GetPortParams",
@@ -37,7 +40,6 @@ export default function ForceSensorPage() {
 		"GetForceRawParams",
 		"GetForceRawEx",
 
-		
 		"IsPressed",
 		"IsPressedRet",
 		"IsPressedParams",
@@ -46,12 +48,6 @@ export default function ForceSensorPage() {
 
 	// define content headers
 	const headers: ContentHeaderType[] = [
-		{
-			id: "0",
-			label: "Constants",
-			ref: refMap.constants,
-			subheaders: [],
-		},
 		{
 			id: "1",
 			label: "GetPort()",
@@ -114,110 +110,108 @@ export default function ForceSensorPage() {
 		>
 			<Content>
 				{/* section: GetPort() */}
-				<ContentSection header={headers[1]}>
+				<ContentSection header={headers[0]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[1].subheaders[0]}>
+					<ContentSubsection subheader={headers[0].subheaders[0]}>
 						<MethodReturns type="integer">
 							Returns the port number of the force sensor
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[1].subheaders[1]}>
+					<ContentSubsection subheader={headers[0].subheaders[1]}>
 						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[1].subheaders[2]}>
+					<ContentSubsection subheader={headers[0].subheaders[2]}>
 						<ContentCode code={GetPortEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: SetPort() */}
-				<ContentSection header={headers[2]}>
+				<ContentSection header={headers[1]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[2].subheaders[0]}>
-						<MethodReturns type="">
-							None
-						</MethodReturns>
+					<ContentSubsection subheader={headers[1].subheaders[0]}>
+						<MethodReturns type="">None</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[2].subheaders[1]}>
-						<MethodParams params={[
-								{ type: "integer", identifier: "port", description: "The port (0 through 5) the force sensor is attached to and what port number the force sensor object will be set to" },
-							]} />
+					<ContentSubsection subheader={headers[1].subheaders[1]}>
+						<MethodParams
+							params={[
+								{
+									type: "integer",
+									identifier: "port",
+									description:
+										"The port (0 through 5) the force sensor is attached to and what port number the force sensor object will be set to",
+								},
+							]}
+						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[2].subheaders[2]}>
+					<ContentSubsection subheader={headers[1].subheaders[2]}>
 						<ContentCode code={SetPortEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: GetForce() */}
-				<ContentSection header={headers[3]}>
+				<ContentSection header={headers[2]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[3].subheaders[0]}>
+					<ContentSubsection subheader={headers[2].subheaders[0]}>
 						<MethodReturns type="integer">
-						Returns the force applied to the force sensor in decinewtons
-						from 0 to 100
+							Returns the force applied to the force sensor in decinewtons from 0 to 100
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[3].subheaders[1]}>
-						<MethodParams
-							params={[]}
-						/>
+					<ContentSubsection subheader={headers[2].subheaders[1]}>
+						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[3].subheaders[2]}>
+					<ContentSubsection subheader={headers[2].subheaders[2]}>
 						<ContentCode code={GetForceEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: GetForceRaw() */}
-				<ContentSection header={headers[4]}>
+				<ContentSection header={headers[3]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[4].subheaders[0]}>
+					<ContentSubsection subheader={headers[3].subheaders[0]}>
 						<MethodReturns type="integer">
-						Returns the raw uncallibrated force applied to the force sensor
+							Returns the raw uncallibrated force applied to the force sensor
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[4].subheaders[1]}>
-						<MethodParams
-							params={[]}
-						/>
+					<ContentSubsection subheader={headers[3].subheaders[1]}>
+						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[4].subheaders[2]}>
+					<ContentSubsection subheader={headers[3].subheaders[2]}>
 						<ContentCode code={GetForceRawEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
 				{/* section: IsPressed() */}
-				<ContentSection header={headers[5]}>
+				<ContentSection header={headers[4]}>
 					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[5].subheaders[0]}>
+					<ContentSubsection subheader={headers[4].subheaders[0]}>
 						<MethodReturns type="boolean">
-						Returns true if the sensor is pressed, false if it is not pressed
+							Returns true if the sensor is pressed, false if it is not pressed
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[5].subheaders[1]}>
-						<MethodParams
-							params={[]}
-						/>
+					<ContentSubsection subheader={headers[4].subheaders[1]}>
+						<MethodParams params={[]} />
 					</ContentSubsection>
 
 					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[5].subheaders[2]}>
+					<ContentSubsection subheader={headers[4].subheaders[2]}>
 						<ContentCode code={IsPressedEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
