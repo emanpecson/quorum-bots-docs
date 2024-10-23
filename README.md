@@ -1,6 +1,6 @@
 ## Getting started
 
-Please install before continuing: [Node](https://nodejs.org/en/download/package-manager). This is a "JavaScript runtime environment" that allows us to run JavaScript code directly on our local machines instead of on a browser.
+Please install this before continuing: [Node](https://nodejs.org/en/download/package-manager). This is a "JavaScript runtime environment" that allows us to run JavaScript code directly on our local machines instead of on a browser.
 
 Next:
 
@@ -31,7 +31,7 @@ This file is automatically associated with a page in our app with a URL ending i
 
 ### Understanding the `page.tsx`
 
-In React, its conventional to define a main function that defines that page. In there, you are able to define variables. And it **MUST** return some _special_ React HTML, which is ultimately what is displayed on the web-page.
+In React, it is conventional to define a main function that defines that page. In there, you are able to define variables. And it **MUST** return some _special_ React HTML, which is ultimately what is displayed on the web-page.
 
 But before we get into that, there are a few variables in the `page.tsx` that we must define for each library:
 
@@ -41,8 +41,8 @@ But before we get into that, there are a few variables in the `page.tsx` that we
 #### `1. refMap`
 
 - `useRefMap()` takes in a list of strings, where each string is some unique name to define a header `ref` on the page
-  - A `ref` is just a direct reference to an HTML element (kinda like a pointer ig)
-- The reason we have this is b/c we display a table-of-contents on the right-side of the documentation labeled "ON THIS PAGE".
+  - A `ref` is just a direct reference to an HTML element (think of it like a pointer)
+- The reason we have this is because we display a table-of-contents on the right-side of the documentation labeled "ON THIS PAGE".
   - And so the `ref` is what lets us know what piece of the page is currently in view by highlighting it in that section.
 - Observe the following example for how we defined `refMap` for each header of the `Button` library.
 
@@ -308,7 +308,7 @@ If you look under [`src/app/docs/(introduction)/...`](https://github.com/emanpec
 
 ### To-do
 
-These pages represent the introduction to our documentation website. An easy way to contribute is to simply add or modify the displayed text to make it _better_.
+These pages represent the introduction to our documentation website. One easy way to contribute is to simply add or modify the displayed text to make it _better_.
 
 ### Structuring the page
 
@@ -326,8 +326,8 @@ Please see [refMap](#1-refmap) and [headers](#2-headers) for understanding how t
 Consists of `page.tsx` files here: [`src/app/docs/(introduction)/{page-name}/page.tsx`](https://github.com/emanpecson/lego-spike-docs/tree/main/src/app/docs/(introduction)).
 
 #### Steps:
-1. Create folder to represent page name
-2. Create file named `page.tsx` in the folder
+1. Create a folder to represent page name
+2. Create a file named `page.tsx` in the folder
 3. Copy/paste the following template into the file
 	```tsx
 	"use client";
@@ -367,8 +367,8 @@ Consists of `page.tsx` files here: [`src/app/docs/(introduction)/{page-name}/pag
 Consists of `page.tsx` files here: [`src/app/docs/libraries/{library-name}/page.tsx`](https://github.com/emanpecson/lego-spike-docs/tree/main/src/app/docs/libraries).
 
 #### Steps:
-1. Create folder to represent library page name
-2. Create file named `page.tsx` in the folder
+1. Create a folder to represent library page name
+2. Create a file named `page.tsx` in the folder
 3. Copy/paste the following template into the file
 	```tsx
 	"use client";
@@ -409,7 +409,7 @@ Go to `src/data/routes.tsx` and look for `mainRoutes`. These are pages that make
 
 #### Steps:
 1. Create a folder under `src/app/` which will represent the name of your page.
-2. Create file named `page.tsx` in the folder
+2. Create a file named `page.tsx` in the folder
 3. Copy/paste the following template into the file
 	```tsx
 	import UnderDevelopment from "@/components/placeholder/under-development";
