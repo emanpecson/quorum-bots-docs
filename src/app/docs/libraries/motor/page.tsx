@@ -255,13 +255,6 @@ export default function MotorPage() {
 	Large motor: -1050 to 1050"
 		headers={headers}>
 			<Content>
-				{/* section: constants */}
-				<ContentSection header={headers[0]}>
-					<Constants
-						constants={[]} 
-					/>
-				</ContentSection>
-
 				{/* section: GetPort() */}
 				<ContentSection header={headers[1]}>
 					{/* sub-section: returns */}

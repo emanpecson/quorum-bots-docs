@@ -32,10 +32,10 @@ export default function ForceSensorPage() {
 		"GetForceParams",
 		"GetForceEx",
 
-		"GetRawForce",
-		"GetRawForceRet",
-		"GetRawForceParams",
-		"GetRawForceEx",
+		"GetForceRaw",
+		"GetForceRawRet",
+		"GetForceRawParams",
+		"GetForceRawEx",
 
 		
 		"IsPressed",
@@ -113,13 +113,6 @@ export default function ForceSensorPage() {
     detect if it has been pressed."
 		>
 			<Content>
-				{/* section: constants */}
-				<ContentSection header={headers[0]}>
-					<Constants
-						constants={[]} 
-					/>
-				</ContentSection>
-
 				{/* section: GetPort() */}
 				<ContentSection header={headers[1]}>
 					{/* sub-section: returns */}
