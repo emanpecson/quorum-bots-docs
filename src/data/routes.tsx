@@ -9,8 +9,8 @@ const introductionRouteGroup: PageRouteGroup = {
 	label: "Introduction",
 	Icon: RabbitIcon,
 	routes: [
+		{ name: "Overview", path: `${dpath}` },
 		{ name: "Motivation", path: `${dpath}/motivation` },
-		{ name: "Overview", path: `${dpath}/overview` },
 		{ name: "Getting Started", path: `${dpath}/getting-started` },
 	],
 };
