@@ -108,7 +108,7 @@ export default function NavWrapper(props: NavWrapperProps) {
 			</div>
 			<div className="overflow-y-auto w-full px-16 pt-3.5 pb-16">
 				<h1 className="text-3xl font-semibold">{props.title}</h1>
-				<p className="w-2/3 text-neutral-500 font-light pt-2">{props.description}</p>
+				<p className="w-5/6 text-neutral-500 font-light pt-2">{props.description}</p>
 				<div className="pt-10">{props.children}</div>
 				<div className="flex pt-16">
 					<div className="flex justify-start w-1/2">

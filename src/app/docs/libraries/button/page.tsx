@@ -8,7 +8,7 @@ import Constants from "@/components/library/constants";
 import MethodParams from "@/components/library/method-params";
 import MethodReturns from "@/components/library/method-returns";
 import NavWrapper from "@/components/navigation/nav-wrapper";
-import { buttonPressDurationEx, isLeftPressedEx, isRightPressedEx } from "@/data/libraries/button";
+import { buttonPressDurationEx, isLeftPressedEx, isRightPressedEx } from "./data";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 

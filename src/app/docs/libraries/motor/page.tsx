@@ -22,7 +22,7 @@ import {
 	RunToAbsolutePositionEx,
 	StopEx,
 	GetVelocityEx,
-} from "@/data/libraries/motor";
+} from "./data";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 

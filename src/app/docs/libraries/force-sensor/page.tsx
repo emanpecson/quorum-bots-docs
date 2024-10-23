@@ -7,13 +7,7 @@ import ContentSection from "@/components/content/content-section";
 import ContentSubsection from "@/components/content/content-subsection";
 import MethodParams from "@/components/library/method-params";
 import MethodReturns from "@/components/library/method-returns";
-import {
-	GetPortEx,
-	SetPortEx,
-	GetForceEx,
-	GetForceRawEx,
-	IsPressedEx,
-} from "@/data/libraries/force-sensor";
+import { GetPortEx, SetPortEx, GetForceEx, GetForceRawEx, IsPressedEx } from "./data";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 

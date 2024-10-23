@@ -219,7 +219,7 @@ These are some components you might be using when documenting:
 #### `<ContentCode />`
   - Display a code block
   - Takes a property `code` as a `string`
-  - See `src/data/libraries/button.tsx` for examples of the formatted string
+  - See `src/docs/libraries/light-matrix/data.ts` for examples of the formatted string
 	- Example:
 		```tsx
 		<NavWrapper>
