@@ -10,6 +10,8 @@ import { Button } from "../ui/button";
 import { usePathname, useRouter } from "next/navigation";
 import NextButton from "../button/next-button";
 import PrevButton from "../button/prev-button";
+import Link from "next/link";
+import { quorumLanguageUrl } from "@/data/url";
 
 interface NavWrapperProps {
 	children: React.ReactNode;
@@ -101,11 +103,14 @@ export default function NavWrapper(props: NavWrapperProps) {
 
 	return (
 		<div className="flex h-screen pt-16">
+			{/* route navigations */}
 			<div className="w-80 overflow-y-auto pb-16 px-8 pt-4 space-y-4">
 				{docsRouteGroups.map((group: PageRouteGroup, i: number) => (
 					<NavPageRouteGroup group={group} key={i} />
 				))}
 			</div>
+
+			{/* main page content */}
 			<div className="overflow-y-auto w-full px-16 pt-3.5 pb-16">
 				<h1 className="text-3xl font-semibold">{props.title}</h1>
 				<p className="w-5/6 text-neutral-500 font-light pt-2">{props.description}</p>
@@ -123,12 +128,27 @@ export default function NavWrapper(props: NavWrapperProps) {
 					</div>
 				</div>
 			</div>
-			<div className="w-80 overflow-y-auto pb-16 pt-4 px-8 space-y-4">
+
+			{/* in-page navigations */}
+			<div className="w-[28rem] overflow-y-auto pb-16 pt-4 px-8 space-y-6">
 				<p className="text-xs font-semibold uppercase">On this page</p>
 				<div className="flex flex-col space-y-2">
 					{props.headers.map((header: ContentHeaderType) => (
 						<NavContentHeader header={header} key={header.id} inViewMap={inViewMap} />
 					))}
+				</div>
+				<div className="rounded-lg border p-6 space-y-4">
+					<h2 className="font-semibold">Bring your ideas to life</h2>
+					<p className="font-light text-sm">
+						Try out Quorum and see why communities with disabilities use our tools
+					</p>
+					<div>
+						<Link href={quorumLanguageUrl}>
+							<Button size={"sm"} className="font-normal text-xs">
+								Try Quorum
+							</Button>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
