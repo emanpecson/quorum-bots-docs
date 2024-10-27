@@ -8,12 +8,13 @@ import { quorumLogoUrl } from "@/data/url";
 import NavMainRoutes from "../navigation/nav-main-routes";
 import { usePathname } from "next/navigation";
 import { metadata } from "@/data/metadata";
+import GitHubButton from "../button/github-button";
 
 export default function Header() {
 	const pathname = usePathname();
 
 	return (
-		<div className="h-16 w-full border-b flex justify-center place-items-center fixed backdrop-blur-md top-0">
+		<div className="h-16 w-full border-b flex justify-center place-items-center fixed backdrop-blur-md top-0 px-2 z-50">
 			<div className="flex justify-between place-items-center w-full max-w-[86rem]">
 				{/* title + main routes */}
 				<div className="flex place-items-center space-x-10">
@@ -35,6 +36,7 @@ export default function Header() {
 				<div className="flex place-items-center space-x-4">
 					{pathname !== "/" && <Search hideInPath="/" />}
 					<ThemeToggle />
+					<GitHubButton />
 				</div>
 			</div>
 		</div>

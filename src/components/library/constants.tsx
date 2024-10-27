@@ -2,7 +2,6 @@ import { Constant } from "@/types/constant";
 import { Input } from "../ui/input";
 import { SearchIcon } from "lucide-react";
 import { ChangeEvent, useEffect, useState } from "react";
-import { Button } from "../ui/button";
 
 interface ConstantsProps {
 	constants: Constant[];

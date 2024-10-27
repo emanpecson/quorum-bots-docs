@@ -1,0 +1,50 @@
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "../ui/dialog";
+import Image from "next/image";
+import GitHubSource from "../github-source";
+import { docsGithubUrl, quorumLanguageGithubUrl, quorumStudioGithubUrl } from "@/data/url";
+import { metadata } from "@/data/metadata";
+
+export default function GitHubButton() {
+	return (
+		<Dialog>
+			<DialogTrigger asChild>
+				<button className="h-full w-full">
+					<Image
+						src={"/icon/github.svg"}
+						alt="github"
+						height={32}
+						width={32}
+						className="h-8 w-8 dark:invert"
+					/>
+				</button>
+			</DialogTrigger>
+			<DialogContent className="max-w-2xl">
+				<DialogTitle>GitHub Sources</DialogTitle>
+				<DialogDescription>
+					Collection of external links to relevant repositories.
+				</DialogDescription>
+
+				<div className="grid gap-4 grid-cols-2 pt-4">
+					<GitHubSource
+						label={metadata.title as string}
+						description="Source for Quorum's LEGO SPIKE library documentation website. Built using Next.js and Tailwind."
+						url={docsGithubUrl}
+						imageSrc="/screenshots/docs-home.png"
+					/>
+					<GitHubSource
+						label="Quorum Language"
+						description="Source for the Quorum language. The world's first evidence oriented programming language."
+						url={quorumLanguageGithubUrl}
+						imageSrc="/screenshots/quorum-website.png"
+					/>
+					<GitHubSource
+						label="Quorum Studio"
+						description="Source for Quorum Studio. Build powerful programs with Quorum's development environment."
+						url={quorumStudioGithubUrl}
+						imageSrc="https://quorumlanguage.com/media/userInterface/quorumAssets/quorumStudio2.png"
+					/>
+				</div>
+			</DialogContent>
+		</Dialog>
+	);
+}

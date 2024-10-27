@@ -88,6 +88,7 @@ export default function ButtonPage() {
 							{ type: "integer", identifier: "LEFT", value: "0" },
 							{ type: "integer", identifier: "RIGHT", value: "1" },
 						]}
+						hideSearch
 					/>
 				</ContentSection>
 
