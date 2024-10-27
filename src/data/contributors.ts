@@ -26,6 +26,9 @@ enum Role {
 	// * primary point-of-contact for website
 	LEAD_WEB_DEV = "Lead web developer",
 
+	// * conduct manual/automatic testing on quorum side or website
+	QA = "Quality assurance",
+
 	// * contributed to ui/ux design
 	UI_UX_DESIGN = "UI/UX designer",
 
@@ -43,7 +46,7 @@ export const contributors: Contributor[] = [
 	{
 		name: "Bret Benjegerdes",
 		imageSrc: "https://avatars.githubusercontent.com/u/64377038?v=4",
-		roles: [Role.LEAD_API_DEV, Role.TECH_WRITER],
+		roles: [Role.LEAD_API_DEV, Role.QA, Role.TECH_WRITER],
 		socials: [
 			{ label: "GitHub", url: "https://github.com/Bret-B", imageSrc: "/icon/github.svg" },
 			{ label: "Email", url: `${email}benjeger@unlv.nevada.edu`, imageSrc: MailIcon },
@@ -52,7 +55,7 @@ export const contributors: Contributor[] = [
 	{
 		name: "Zachary Wylie",
 		imageSrc: "https://avatars.githubusercontent.com/u/167380685?v=4",
-		roles: [Role.LEAD_API_DEV, Role.CODE_REVIEW, Role.TECH_WRITER],
+		roles: [Role.LEAD_API_DEV, Role.QA, Role.CODE_REVIEW, Role.TECH_WRITER],
 		socials: [
 			{ label: "GitHub", url: "https://github.com/wyliez1", imageSrc: "/icon/github.svg" },
 			{ label: "Email", url: `${email}wyliez1@unlv.nevada.edu`, imageSrc: MailIcon },

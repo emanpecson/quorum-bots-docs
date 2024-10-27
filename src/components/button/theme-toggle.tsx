@@ -9,7 +9,7 @@ export function ThemeToggle() {
 
 	return (
 		<button
-			className="w-full h-full flex justify-center place-items-center"
+			className="w-fit h-full flex justify-center place-items-center"
 			onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
 		>
 			{resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}

@@ -5,14 +5,16 @@ import Link from "next/link";
 export default function ContributorInfo({ contributor }: { contributor: Contributor }) {
 	return (
 		<div className="w-72 h-fit flex flex-col place-items-center space-y-2">
-			<Image
-				src={contributor.imageSrc}
-				alt={`${contributor.name} image`}
-				height={128}
-				width={128}
-				className="rounded-full object-cover h-32 w-32 shadow-md"
-				unoptimized
-			/>
+			<Link href={contributor.socials.length > 0 ? contributor.socials[0].url : "/contributors"}>
+				<Image
+					src={contributor.imageSrc}
+					alt={`${contributor.name} image`}
+					height={128}
+					width={128}
+					className="rounded-full object-cover h-32 w-32 shadow-md"
+					unoptimized
+				/>
+			</Link>
 			<p className="font-medium">{contributor.name}</p>
 			<div className="flex flex-wrap gap-0.5 justify-center">
 				{contributor.roles.map((role: string, i: number) => (

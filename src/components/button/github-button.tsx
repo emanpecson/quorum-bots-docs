@@ -1,4 +1,11 @@
-import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "../ui/dialog";
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "../ui/dialog";
 import Image from "next/image";
 import GitHubSource from "../github-source";
 import { docsGithubUrl, quorumLanguageGithubUrl, quorumStudioGithubUrl } from "@/data/url";
@@ -8,7 +15,7 @@ export default function GitHubButton() {
 	return (
 		<Dialog>
 			<DialogTrigger asChild>
-				<button className="h-full w-full">
+				<button className="w-fit h-full">
 					<Image
 						src={"/icon/github.svg"}
 						alt="github"
@@ -19,10 +26,12 @@ export default function GitHubButton() {
 				</button>
 			</DialogTrigger>
 			<DialogContent className="max-w-2xl">
-				<DialogTitle>GitHub Sources</DialogTitle>
-				<DialogDescription>
-					Collection of external links to relevant repositories.
-				</DialogDescription>
+				<DialogHeader>
+					<DialogTitle>GitHub Sources</DialogTitle>
+					<DialogDescription>
+						Collection of external links to relevant repositories.
+					</DialogDescription>
+				</DialogHeader>
 
 				<div className="grid gap-4 grid-cols-2 pt-4">
 					<GitHubSource

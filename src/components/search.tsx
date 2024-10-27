@@ -19,7 +19,6 @@ import { SearchIcon } from "lucide-react";
 
 interface SearchProps {
 	placeholder?: string;
-	hideInPath?: string;
 }
 
 export default function Search(props: SearchProps) {
@@ -55,13 +54,13 @@ export default function Search(props: SearchProps) {
 				<Button
 					variant={"outline"}
 					size={"sm"}
-					className="font-normal text-neutral-600 dark:text-neutral-400 rounded-xl px-4 relative h-11 space-x-4"
+					className="lg:w-fit w-full font-normal text-neutral-600 dark:text-neutral-400 rounded-xl px-4 relative h-11 space-x-4 flex justify-between"
 				>
 					<div className="flex space-x-2.5 place-items-center">
 						<SearchIcon className="text-neutral-500" />
 						<span>{props.placeholder ?? "Search documentation..."}</span>
 					</div>
-					<kbd className="flex place-items-center space-x-0.5 border rounded-lg shadow-sm shadow-neutral-300 dark:shadow-neutral-800 px-2">
+					<kbd className="place-items-center space-x-0.5 border rounded-lg shadow-sm shadow-neutral-300 dark:shadow-neutral-800 px-2 sm:flex hidden">
 						{isMac ? (
 							<span className="text-xl">⌘</span>
 						) : (
@@ -72,7 +71,7 @@ export default function Search(props: SearchProps) {
 				</Button>
 			</DialogTrigger>
 			<DialogContent aria-describedby="search-docs" className="p-0">
-				<DialogTitle className="hidden" />
+				<DialogTitle className="hidden">Search</DialogTitle>
 
 				<Command>
 					<CommandInput placeholder="Search doucmentation..." />
