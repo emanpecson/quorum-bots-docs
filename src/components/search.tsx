@@ -52,9 +52,9 @@ export default function Search(props: SearchProps) {
 		<Dialog open={isOpen} onOpenChange={setIsOpen}>
 			<DialogTrigger asChild>
 				<Button
-					variant={"outline"}
-					size={"sm"}
-					className="lg:w-fit w-full font-normal text-neutral-600 dark:text-neutral-400 rounded-xl px-4 relative h-11 space-x-4 flex justify-between"
+					variant="outline"
+					size="sm"
+					className="lg:w-fit w-full font-normal text-neutral-600 dark:text-neutral-400 rounded-xl px-4 relative h-11 space-x-4 flex justify-between backdrop-blur-sm bg-transparent"
 				>
 					<div className="flex space-x-2.5 place-items-center">
 						<SearchIcon className="text-neutral-500" />

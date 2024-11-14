@@ -102,18 +102,18 @@ export default function NavWrapper(props: NavWrapperProps) {
 	}, [pathname]);
 
 	return (
-		<div className="flex h-screen pt-16">
+		<div className="flex h-screen">
 			{/* route navigations */}
-			<div className="sm:block hidden w-80 overflow-y-auto pb-16 px-8 pt-4 space-y-4">
+			<div className="sm:block hidden w-80 overflow-y-auto pb-16 px-8 pt-20 space-y-4">
 				{docsRouteGroups.map((group: PageRouteGroup, i: number) => (
 					<NavPageRouteGroup group={group} key={i} />
 				))}
 			</div>
 
 			{/* main page content */}
-			<div className="lg:px-8 px-4 overflow-y-auto w-full pt-3.5 pb-16">
+			<div className="lg:px-8 px-4 overflow-y-auto w-full pb-16 pt-20">
 				<h1 className="text-3xl font-semibold">{props.title}</h1>
-				<p className="w-5/6 text-neutral-500 font-light pt-2">{props.description}</p>
+				<p className="w-5/6 font-light pt-2">{props.description}</p>
 				<div className="pt-10">{props.children}</div>
 				<div className="flex pt-16">
 					<div className="flex justify-start w-1/2">
@@ -130,7 +130,7 @@ export default function NavWrapper(props: NavWrapperProps) {
 			</div>
 
 			{/* in-page navigations */}
-			<div className="lg:block hidden w-[28rem] overflow-y-auto pb-16 pt-4 px-8 space-y-6">
+			<div className="lg:block hidden w-[28rem] overflow-y-auto pb-16 pt-20 px-8 space-y-6">
 				<p className="text-xs font-semibold uppercase">On this page</p>
 				<div className="flex flex-col space-y-2">
 					{props.headers.map((header: ContentHeaderType) => (

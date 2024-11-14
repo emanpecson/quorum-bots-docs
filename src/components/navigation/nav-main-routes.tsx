@@ -35,6 +35,7 @@ export default function NavMainRoutes(props: NavMainRoutesProps) {
 						label={route.name}
 						isActive={activePage === route.name}
 						onClick={props.onLinkClick}
+						disableTranslate
 					/>
 				);
 			})}

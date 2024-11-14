@@ -6,16 +6,13 @@ import Search from "../search";
 import Link from "next/link";
 import { quorumLogoUrl } from "@/data/url";
 import NavMainRoutes from "../navigation/nav-main-routes";
-import { usePathname } from "next/navigation";
 import { metadata } from "@/data/metadata";
 import GitHubButton from "../button/github-button";
 import PanelButton from "../button/panel-button";
 
 export default function Header() {
-	const pathname = usePathname();
-
 	return (
-		<div className="h-16 w-full border-b flex justify-center place-items-center fixed backdrop-blur-md top-0 px-4 z-50">
+		<div className="h-16 w-full flex justify-center place-items-center fixed backdrop-blur-md top-0 px-4 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 z-50">
 			<div className="flex justify-between place-items-center w-full max-w-[86rem] space-x-3">
 				{/* title + main routes */}
 				<div className="w-fit">
@@ -29,7 +26,7 @@ export default function Header() {
 									width={36}
 									className="dark:invert"
 								/>
-								<h1 className="text-lg font-medium text-nowrap">{metadata.title as string}</h1>
+								<h1 className="text-xl font-semibold text-nowrap">{metadata.title as string}</h1>
 							</Link>
 
 							<NavMainRoutes />
@@ -44,7 +41,7 @@ export default function Header() {
 
 				{/* search + header buttons */}
 				<div className="flex place-items-center space-x-4 w-full lg:w-fit justify-end">
-					{pathname !== "/" && <Search />}
+					<Search />
 					<ThemeToggle />
 					<GitHubButton />
 				</div>

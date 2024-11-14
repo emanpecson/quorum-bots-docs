@@ -29,7 +29,7 @@ export default function ContributorInfo({ contributor }: { contributor: Contribu
 
 			<div className="flex flex-wrap space-x-2.5 justify-center">
 				{contributor.socials.map((social: Social, i: number) => (
-					<Link href={social.url}>
+					<Link key={i} href={social.url}>
 						{typeof social.imageSrc === "string" ? (
 							<Image
 								src={social.imageSrc}

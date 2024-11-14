@@ -38,6 +38,9 @@ enum Role {
 	// * contributed to design portfolio or wrote user-guides
 	TECH_WRITER = "Technical writer",
 
+	// * conducted interviews
+	USER_STUDY = "User study",
+
 	// * create quorum
 	CREATOR = "Creator of Quorum",
 }
@@ -46,7 +49,7 @@ export const contributors: Contributor[] = [
 	{
 		name: "Bret Benjegerdes",
 		imageSrc: "https://avatars.githubusercontent.com/u/64377038?v=4",
-		roles: [Role.LEAD_API_DEV, Role.QA, Role.TECH_WRITER],
+		roles: [Role.LEAD_API_DEV, Role.QA, Role.USER_STUDY, Role.TECH_WRITER],
 		socials: [
 			{ label: "GitHub", url: "https://github.com/Bret-B", imageSrc: "/icon/github.svg" },
 			{ label: "Email", url: `${email}benjeger@unlv.nevada.edu`, imageSrc: MailIcon },
@@ -55,7 +58,7 @@ export const contributors: Contributor[] = [
 	{
 		name: "Zachary Wylie",
 		imageSrc: "https://avatars.githubusercontent.com/u/167380685?v=4",
-		roles: [Role.LEAD_API_DEV, Role.QA, Role.CODE_REVIEW, Role.TECH_WRITER],
+		roles: [Role.LEAD_API_DEV, Role.QA, Role.CODE_REVIEW, Role.USER_STUDY, Role.TECH_WRITER],
 		socials: [
 			{ label: "GitHub", url: "https://github.com/wyliez1", imageSrc: "/icon/github.svg" },
 			{ label: "Email", url: `${email}wyliez1@unlv.nevada.edu`, imageSrc: MailIcon },

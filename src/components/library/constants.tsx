@@ -33,6 +33,7 @@ export default function Constants(props: ConstantsProps) {
 
 	useEffect(() => {
 		setFilteredConstants(props.constants.filter(handleFilter));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [search]);
 
 	return (

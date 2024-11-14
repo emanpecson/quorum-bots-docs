@@ -1,11 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: [
-			"avatars.githubusercontent.com",
-			"media.licdn.com",
-			"quorumlanguage.com",
-			"web.cs.unlv.edu",
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "avatars.githubusercontent.com",
+			},
+			{
+				protocol: "https",
+				hostname: "media.licdn.com",
+			},
+			{
+				protocol: "https",
+				hostname: "quorumlanguage.com",
+			},
+			{
+				protocol: "https",
+				hostname: "web.cs.unlv.edu",
+			},
 		],
 	},
 };

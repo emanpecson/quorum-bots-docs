@@ -6,6 +6,7 @@ interface NavLinkProps {
 	href: string;
 	label: string;
 	onClick?: () => void;
+	disableTranslate?: boolean;
 }
 
 export default function NavLink(props: NavLinkProps) {
@@ -14,9 +15,8 @@ export default function NavLink(props: NavLinkProps) {
 			onClick={props.onClick}
 			href={props.href}
 			className={cn(
-				props.isActive
-					? "text-black dark:text-white"
-					: "text-neutral-400 hover:text-black dark:hover:text-white hover:translate-x-1 lg:hover:translate-x-0",
+				props.isActive ? "font-semibold" : "opacity-60",
+				!props.disableTranslate && !props.isActive && "hover:translate-x-1",
 				"translation-all duration-150 text-nowrap py-1 text-base w-full"
 			)}
 		>
