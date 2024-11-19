@@ -12,7 +12,7 @@ import PanelButton from "../button/panel-button";
 
 export default function Header() {
 	return (
-		<div className="h-16 w-full flex justify-center place-items-center fixed backdrop-blur-md top-0 px-4 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 z-50">
+		<div className="h-16 w-full flex justify-center place-items-center fixed backdrop-blur-md top-0 px-4 bg-white dark:bg-neutral-800 bg-opacity-60 dark:bg-opacity-60 z-50">
 			<div className="flex justify-between place-items-center w-full max-w-[86rem] space-x-3">
 				{/* title + main routes */}
 				<div className="w-fit">

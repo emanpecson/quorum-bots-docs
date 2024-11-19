@@ -14,7 +14,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={inter.className}>
 				<ThemeProvider attribute="class" defaultTheme="system">
-					<div className="h-screen w-screen overflow-x-hidden">
+					<div className="min-h-screen w-screen overflow-x-hidden">
 						<Header />
 						<div className="w-full flex justify-center">
 							<div className="w-full">{children}</div>

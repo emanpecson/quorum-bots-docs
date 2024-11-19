@@ -32,9 +32,6 @@ enum Role {
 	// * contributed to ui/ux design
 	UI_UX_DESIGN = "UI/UX designer",
 
-	// * conducted a code review (via pull request)
-	CODE_REVIEW = "Code reviewer",
-
 	// * contributed to design portfolio or wrote user-guides
 	TECH_WRITER = "Technical writer",
 
@@ -58,7 +55,7 @@ export const contributors: Contributor[] = [
 	{
 		name: "Zachary Wylie",
 		imageSrc: "https://avatars.githubusercontent.com/u/167380685?v=4",
-		roles: [Role.LEAD_API_DEV, Role.QA, Role.CODE_REVIEW, Role.USER_STUDY, Role.TECH_WRITER],
+		roles: [Role.LEAD_API_DEV, Role.QA, Role.USER_STUDY, Role.TECH_WRITER],
 		socials: [
 			{ label: "GitHub", url: "https://github.com/wyliez1", imageSrc: "/icon/github.svg" },
 			{ label: "Email", url: `${email}wyliez1@unlv.nevada.edu`, imageSrc: MailIcon },
@@ -69,7 +66,7 @@ export const contributors: Contributor[] = [
 		imageSrc:
 			// "https://media.licdn.com/dms/image/v2/C5603AQEQSnQC_RD5OA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1647145780595?e=1735171200&v=beta&t=dXjp8MI8UGF7PEDjAF1QoyTCtIl4W6dIBQ97ngOgV8I",
 			"/profile/lego-eman.png",
-		roles: [Role.LEAD_WEB_DEV, Role.UI_UX_DESIGN, Role.CODE_REVIEW, Role.TECH_WRITER],
+		roles: [Role.LEAD_WEB_DEV, Role.UI_UX_DESIGN, Role.TECH_WRITER],
 		socials: [
 			{ label: "Portfolio", url: "https://emanpecson.com", imageSrc: UserCircle2Icon },
 			{

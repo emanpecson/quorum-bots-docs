@@ -4,7 +4,7 @@ import HeroSection from "@/components/home/hero-section";
 import PreviewSection from "@/components/home/preview-section";
 
 export default function HomePage() {
-	const blurDelay = 0.15;
+	// const blurDelay = 0.15;
 
 	return (
 		<div className="pb-32 space-y-16 sm:pt-24 pt-12">

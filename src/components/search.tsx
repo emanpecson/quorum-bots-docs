@@ -91,7 +91,10 @@ export default function Search(props: SearchProps) {
 											value={route.name}
 											onSelect={() => handleSelect(route.path)}
 										>
-											<Link href={route.path} className="flex space-x-2 w-full text-neutral-600">
+											<Link
+												href={route.path}
+												className="flex space-x-2 w-full dark:text-neutral-300 text-neutral-700"
+											>
 												<sec.Icon size={20} />
 												<p>{route.name}</p>
 											</Link>

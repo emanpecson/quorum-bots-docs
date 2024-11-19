@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Quorum LEGO SPIKE Library",
+	title: "Quorum Bots",
 	description:
-		"Documentation webpage for the LEGO SPIKE class and its libraries for the Quorum language",
+		"Documentation webpage for the Quorum language's integration of LEGO SPIKE functionalities.",
 };

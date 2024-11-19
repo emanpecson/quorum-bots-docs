@@ -16,7 +16,7 @@ export default function HeroSection() {
 	return (
 		<div className="w-full flex flex-col place-items-center space-y-4 px-4">
 			<BlurFade delay={delay} {...blurFadeProps}>
-				<div className="lg:text-7xl sm:text-5xl text-4xl font-extrabold space-y-1 text-neutral-700 dark:text-neutral-200 text-center">
+				<div className="lg:text-7xl sm:text-5xl text-3xl font-extrabold space-y-1 text-neutral-700 dark:text-neutral-200 text-center">
 					<h1 className="text-nowrap">Empowering Everyone:</h1>
 					<div className="flex justify-center place-items-center sm:space-x-2.5 space-x-1.5 flex-nowrap">
 						<h1>Quorum</h1>

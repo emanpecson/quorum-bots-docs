@@ -1,23 +1,34 @@
+"use client";
+
 import { quorumStudioUrl } from "@/data/url";
 import { CodeXmlIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import BlurFade from "../ui/blur-fade";
+import { useTheme } from "next-themes";
 
 export default function PreviewSection() {
+	const { resolvedTheme } = useTheme();
+
 	return (
 		<div className="w-full flex justify-center lg:pr-52">
 			<BlurFade duration={1} blur="0px">
 				<div className="relative">
 					<Image
-						src={"/screenshots/quorum-studio-code.png"}
+						src={
+							resolvedTheme === "light"
+								? "/screenshots/quorum-blocks-light.png"
+								: "/screenshots/quorum-blocks-dark.png"
+						}
 						alt="quorum studio"
 						height={24}
 						width={24}
-						className="rounded-lg border shadow-xl w-fit lg:"
+						className="rounded-lg border shadow-xl md:w-[40rem] lg:w-[52rem] w-fit"
 						unoptimized
 					/>
-					<div className="p-6 border rounded-2xl space-y-4 sm:w-[28rem] w-full h-fit lg:absolute lg:-right-52 lg:top-32 bg-background shadow-xl mx-auto lg:mx-0 mt-6 lg:mt-0">
+
+					{/* let's code */}
+					<div className="p-6 border rounded-2xl space-y-4 sm:w-[28rem] w-full h-fit lg:absolute lg:-right-52 lg:top-36 bg-background shadow-xl mx-auto lg:mx-0 mt-6 lg:mt-0">
 						<div className="flex space-x-5 place-items-center text-neutral-700 dark:text-neutral-300">
 							<div>
 								<CodeXmlIcon className="lg:block hidden" size={40} strokeWidth={3} />
