@@ -17,18 +17,18 @@ export default function FAQSection() {
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-2" className="px-4 rounded-lg border-2">
-					<AccordionTrigger>What is LEGO SPIKE?</AccordionTrigger>
+					<AccordionTrigger>What is LEGO® SPIKE™?</AccordionTrigger>
 					<AccordionContent>
-						LEGO SPIKE is an interactive robotics kit that is designed to introduce students to the
-						engineering field.
+						LEGO® SPIKE™ is an interactive robotics kit that is designed to introduce students to
+						the engineering field.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-3" className="px-4 rounded-lg border-2">
 					<AccordionTrigger>What is this website for?</AccordionTrigger>
 					<AccordionContent>
-						This website provides a comprehensive reference to all of the LEGO SPIKE libraries that
-						can be used in Quorum. It provides developers with a guide to each library and how to
-						use its functionalities.
+						This website provides a comprehensive reference to all of the LEGO® SPIKE™ libraries
+						that can be used in Quorum. It provides developers with a guide to each library and how
+						to use its functionalities.
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>

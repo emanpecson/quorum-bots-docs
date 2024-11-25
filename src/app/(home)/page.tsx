@@ -1,23 +1,28 @@
-import FAQSection from "@/components/home/faq-section";
 import FeaturesSection from "@/components/home/features-section";
+import FooterSection from "@/components/home/footer/footer-section";
 import HeroSection from "@/components/home/hero-section";
 import PreviewSection from "@/components/home/preview-section";
+import SectionWrapper from "@/components/home/section-wrapper";
 
 export default function HomePage() {
-	// const blurDelay = 0.15;
-
 	return (
 		<div className="pb-32 space-y-16 sm:pt-24 pt-12">
-			<div className="max-w-[86rem] space-y-36 mx-auto px-4">
-				<HeroSection />
-				<PreviewSection />
-			</div>
-			<div className="bg-neutral-100 dark:bg-neutral-900 py-16">
-				<div className="max-w-[86rem] space-y-24 mx-auto lg:px-8 px-4">
-					<FeaturesSection />
-					<FAQSection />
+			<SectionWrapper>
+				<div className="lg:flex lg:space-x-8 lg:space-y-0 space-y-8">
+					<div className="lg:w-1/2 w-full">
+						<HeroSection />
+					</div>
+					<div className="lg:w-1/2 w-full">
+						<PreviewSection />
+					</div>
 				</div>
-			</div>
+			</SectionWrapper>
+			<SectionWrapper>
+				<FeaturesSection />
+			</SectionWrapper>
+			<SectionWrapper>
+				<FooterSection />
+			</SectionWrapper>
 		</div>
 	);
 }

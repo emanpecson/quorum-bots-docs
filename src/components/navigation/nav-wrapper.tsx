@@ -12,6 +12,7 @@ import NextButton from "../button/next-button";
 import PrevButton from "../button/prev-button";
 import Link from "next/link";
 import { quorumLanguageUrl } from "@/data/url";
+import Image from "next/image";
 
 interface NavWrapperProps {
 	children: React.ReactNode;
@@ -137,15 +138,26 @@ export default function NavWrapper(props: NavWrapperProps) {
 						<NavContentHeader header={header} key={header.id} inViewMap={inViewMap} />
 					))}
 				</div>
-				<div className="rounded-lg border p-6 space-y-4">
-					<h2 className="font-semibold">Bring your ideas to life</h2>
-					<p className="font-light text-sm">
-						Try out Quorum and see why communities with disabilities use our tools
+
+				<div className="rounded-lg border p-6 space-y-4 relative">
+					<div className="flex space-x-2">
+						<h2 className="font-bold text-onyx dark:text-neutral-100">Bring your ideas to life</h2>
+						<Image
+							src="/art/lego-mascot-minifig.png"
+							alt="lego bunny"
+							height={24}
+							width={24}
+							className="w-16 absolute -top-6 -right-8"
+							unoptimized
+						/>
+					</div>
+					<p className="font-light text-base text-onyx dark:text-neutral-200">
+						Try out Quorum and see why many communities love our tools
 					</p>
 					<div>
 						<Link href={quorumLanguageUrl}>
 							<Button size={"sm"} className="font-normal text-xs">
-								Try Quorum
+								Visit Quorum
 							</Button>
 						</Link>
 					</div>

@@ -161,7 +161,7 @@ export default function MotorPage() {
 	return (
 		<NavWrapper
 			title="LightMatrix"
-			description="The light matrix controls a 5x5 set of pixels on the Spike robot. The 
+			description="The light matrix controls a 5x5 set of pixels on the Spike™ robot. The 
     first pixel in the top left is 0,0 and the bottom right pixel is 4,4. 
     You can get and set the pixels manually, clear the display, or write words to it."
 			headers={headers}

@@ -36,9 +36,9 @@ export default function GitHubButton() {
 				<div className="grid gap-4 grid-cols-2 pt-4">
 					<GitHubSource
 						label={metadata.title as string}
-						description="Source for Quorum's LEGO SPIKE library documentation website. Built using Next.js and Tailwind."
+						description="Source for Quorum's LEGO® SPIKE™ library documentation website. Built using Next.js and Tailwind."
 						url={docsGithubUrl}
-						imageSrc="/screenshots/docs-home.png"
+						imageSrc="/screenshots/docs-ui.png"
 					/>
 					<GitHubSource
 						label="Quorum Language"
@@ -50,7 +50,7 @@ export default function GitHubButton() {
 						label="Quorum Studio"
 						description="Source for Quorum Studio. Build powerful programs with Quorum's development environment."
 						url={quorumStudioGithubUrl}
-						imageSrc="https://quorumlanguage.com/media/userInterface/quorumAssets/quorumStudio2.png"
+						imageSrc="/screenshots/quorum-studio-ui.png"
 					/>
 				</div>
 			</DialogContent>
