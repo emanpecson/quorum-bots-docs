@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function FooterSection() {
 	return (
-		<div className="w-full md:flex md:justify-between border-t pt-8 space-x-6 md:space-y-0 space-y-8">
+		<div className="w-full md:flex md:justify-between justify-start border-t pt-8 space-x-6 md:space-y-0 space-y-8">
 			<div className="md:w-1/3 space-y-6 text-onyx dark:text-neutral-100">
 				<div className="flex space-x-3 place-items-center">
 					<Image
@@ -36,7 +36,7 @@ export default function FooterSection() {
 			</div>
 
 			{/* links + resources */}
-			<div className="flex space-x-24">
+			<div className="sm:flex sm:space-x-24 space-x-0 sm:space-y-0 space-y-4">
 				<FooterLinks
 					heading="Quorum"
 					links={[

@@ -19,6 +19,7 @@ import { SearchIcon } from "lucide-react";
 
 interface SearchProps {
 	placeholder?: string;
+	disableKeyboardAccess?: boolean;
 }
 
 export default function Search(props: SearchProps) {
@@ -38,19 +39,21 @@ export default function Search(props: SearchProps) {
 	};
 
 	useEffect(() => {
-		// open if cmd/ctrl + k pressed
-		const openSearch = (ev: KeyboardEvent) => {
-			if ((ev.metaKey || ev.ctrlKey) && ev.key === "k") {
-				ev.preventDefault();
-				setIsOpen((open) => !open);
-			}
-		};
+		if (!props.disableKeyboardAccess) {
+			// open if cmd/ctrl + k pressed
+			const openSearch = (ev: KeyboardEvent) => {
+				if ((ev.metaKey || ev.ctrlKey) && ev.key === "k") {
+					ev.preventDefault();
+					setIsOpen((open) => !open);
+				}
+			};
 
-		// on key pressed, trigger this func
-		document.addEventListener("keydown", openSearch);
+			// on key pressed, trigger this func
+			document.addEventListener("keydown", openSearch);
 
-		// cleanup event-listener on exit
-		return () => document.removeEventListener("keydown", openSearch);
+			// cleanup event-listener on exit
+			return () => document.removeEventListener("keydown", openSearch);
+		}
 	});
 
 	return (

@@ -32,7 +32,7 @@ export default function HeroSection() {
 					<Button className="rounded-xl" asChild>
 						<Link href={docsRouteGroups[0].routes[0].path}>Browse docs</Link>
 					</Button>
-					<Search placeholder="Quick search..." />
+					<Search placeholder="Quick search..." disableKeyboardAccess />
 				</div>
 			</BlurFade>
 		</div>

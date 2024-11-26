@@ -112,7 +112,7 @@ export default function NavWrapper(props: NavWrapperProps) {
 			</div>
 
 			{/* main page content */}
-			<div className="lg:px-8 px-4 overflow-y-auto w-full pb-16 pt-20">
+			<div className="lg:px-8 px-4 overflow-y-auto w-full pb-16 pt-20 min-h-screen">
 				<h1 className="text-3xl font-semibold">{props.title}</h1>
 				<p className="w-5/6 font-light pt-2">{props.description}</p>
 				<div className="pt-10">{props.children}</div>

@@ -12,7 +12,7 @@ interface FooterLinksProps {
 
 export default function FooterLinks(props: FooterLinksProps) {
 	return (
-		<div className="flex justify-end">
+		<div className="flex sm:justify-end justify-start">
 			<div className="space-y-4">
 				<p className="font-semibold">{props.heading}</p>
 				<div className="font-normal">
