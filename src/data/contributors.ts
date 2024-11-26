@@ -48,7 +48,7 @@ export const contributors: Contributor[] = [
 		imageSrc: "https://avatars.githubusercontent.com/u/64377038?v=4",
 		roles: [Role.LEAD_API_DEV, Role.QA, Role.USER_STUDY, Role.TECH_WRITER],
 		socials: [
-			{ label: "GitHub", url: "https://github.com/Bret-B", imageSrc: "/icon/github.svg" },
+			{ label: "GitHub", url: "https://github.com/Bret-B", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}benjeger@unlv.nevada.edu`, imageSrc: MailIcon },
 		],
 	},
@@ -57,24 +57,22 @@ export const contributors: Contributor[] = [
 		imageSrc: "https://avatars.githubusercontent.com/u/167380685?v=4",
 		roles: [Role.LEAD_API_DEV, Role.QA, Role.USER_STUDY, Role.TECH_WRITER],
 		socials: [
-			{ label: "GitHub", url: "https://github.com/wyliez1", imageSrc: "/icon/github.svg" },
+			{ label: "GitHub", url: "https://github.com/wyliez1", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}wyliez1@unlv.nevada.edu`, imageSrc: MailIcon },
 		],
 	},
 	{
 		name: "Emanuel Pecson",
-		imageSrc:
-			// "https://media.licdn.com/dms/image/v2/C5603AQEQSnQC_RD5OA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1647145780595?e=1735171200&v=beta&t=dXjp8MI8UGF7PEDjAF1QoyTCtIl4W6dIBQ97ngOgV8I",
-			"/profile/lego-eman.png",
+		imageSrc: "/images/lego-eman.png",
 		roles: [Role.LEAD_WEB_DEV, Role.UI_UX_DESIGN, Role.TECH_WRITER],
 		socials: [
 			{ label: "Portfolio", url: "https://emanpecson.com", imageSrc: UserCircle2Icon },
 			{
 				label: "LinkedIn",
 				url: "https://www.linkedin.com/in/emanuel-pecson/",
-				imageSrc: "/icon/linkedin.png",
+				imageSrc: "/icons/linkedin.png",
 			},
-			{ label: "GitHub", url: "https://github.com/emanpecson", imageSrc: "/icon/github.svg" },
+			{ label: "GitHub", url: "https://github.com/emanpecson", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}emanpecson@gmail.com`, imageSrc: MailIcon },
 		],
 	},
@@ -83,7 +81,7 @@ export const contributors: Contributor[] = [
 		imageSrc: "https://avatars.githubusercontent.com/u/104801443?v=4",
 		roles: [Role.API_DEV, Role.UI_UX_DESIGN, Role.TECH_WRITER],
 		socials: [
-			{ label: "GitHub", url: "https://github.com/WilliamL10", imageSrc: "/icon/github.svg" },
+			{ label: "GitHub", url: "https://github.com/WilliamL10", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}luongw1@unlv.nevada.edu`, imageSrc: MailIcon },
 		],
 	},
@@ -95,7 +93,7 @@ export const contributors: Contributor[] = [
 			{
 				label: "GitHub",
 				url: "https://github.com/DanielaPedraza1",
-				imageSrc: "/icon/github.svg",
+				imageSrc: "/icons/github.svg",
 			},
 			{ label: "Email", url: `${email}pedrazao@unlv.nevada.edu`, imageSrc: MailIcon },
 		],
@@ -105,7 +103,7 @@ export const contributors: Contributor[] = [
 		imageSrc: "https://avatars.githubusercontent.com/u/98198302?v=4",
 		roles: [Role.WEB_DEV, Role.TECH_WRITER],
 		socials: [
-			{ label: "GitHub", url: "https://github.com/anhcong0901", imageSrc: "/icon/github.svg" },
+			{ label: "GitHub", url: "https://github.com/anhcong0901", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}conga1@unlv.nevada.edu`, imageSrc: MailIcon },
 		],
 	},
@@ -114,7 +112,7 @@ export const contributors: Contributor[] = [
 		imageSrc: "https://avatars.githubusercontent.com/u/185986147?v=4",
 		roles: [Role.API_DEV, Role.TECH_WRITER],
 		socials: [
-			{ label: "GitHub", url: "https://github.com/donessie94", imageSrc: "/icon/github.svg" },
+			{ label: "GitHub", url: "https://github.com/donessie94", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}donessie@unlv.nevada.edu`, imageSrc: MailIcon },
 		],
 	},
@@ -131,9 +129,9 @@ export const contributors: Contributor[] = [
 			{
 				label: "LinkedIn",
 				url: "https://www.linkedin.com/in/stefika/",
-				imageSrc: "/icon/linkedin.png",
+				imageSrc: "/icons/linkedin.png",
 			},
-			{ label: "GitHub", url: "https://github.com/andreas-stefik", imageSrc: "/icon/github.svg" },
+			{ label: "GitHub", url: "https://github.com/andreas-stefik", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}andreas.stefik@unlv.edu`, imageSrc: MailIcon },
 		],
 	},

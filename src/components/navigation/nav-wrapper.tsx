@@ -143,7 +143,7 @@ export default function NavWrapper(props: NavWrapperProps) {
 					<div className="flex space-x-2">
 						<h2 className="font-bold text-onyx dark:text-neutral-100">Bring your ideas to life</h2>
 						<Image
-							src="/art/lego-mascot-minifig.png"
+							src="/images/lego-mascot-minifig.png"
 							alt="lego bunny"
 							height={24}
 							width={24}

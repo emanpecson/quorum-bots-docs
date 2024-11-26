@@ -10,7 +10,7 @@ export default function FeaturesSection() {
 			<div className="space-y-12">
 				<div className="mx-auto text-center lg:w-3/5 w-5/6 space-y-4">
 					<Image
-						src="/art/mascot-and-bot.png"
+						src="/images/mascot-and-bot.png"
 						alt="bunny and bot"
 						height={24}
 						width={24}
@@ -33,7 +33,7 @@ export default function FeaturesSection() {
 							Icon={MapIcon}
 							label="Endless functions"
 							description="Quorum has integrated a wide range of LEGO® SPIKE™ functionalities like Button, Motor, DistanceSensor and more! Visit the docs to see how these tools work."
-							imageSrc="/screenshots/docs-ui.png"
+							imageSrc="/images/docs-ui.png"
 							imageAlt="docs ui"
 							redirectUrl="/docs"
 						/>
@@ -41,7 +41,7 @@ export default function FeaturesSection() {
 							Icon={SquareCodeIcon}
 							label="Accessible programming"
 							description="Write instructions for your LEGO® SPIKE™ robot using Quorum's keyboard-accessible coding blocks."
-							imageSrc="/screenshots/quorum-studio-ui.png"
+							imageSrc="/images/quorum-studio-ui.png"
 							imageAlt="send code ui"
 							redirectUrl="/docs"
 						/>
@@ -49,7 +49,7 @@ export default function FeaturesSection() {
 							Icon={SendIcon}
 							label="Send and run"
 							description="Send code from Quorum Studio directly to your LEGO® SPIKE™ robot and watch the magic happen."
-							imageSrc="/screenshots/send-code-ui.png"
+							imageSrc="/images/send-code-ui.png"
 							imageAlt="send code ui"
 							redirectUrl="/docs"
 						/>

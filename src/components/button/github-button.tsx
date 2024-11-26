@@ -17,7 +17,7 @@ export default function GitHubButton() {
 			<DialogTrigger asChild>
 				<button className="w-fit h-full">
 					<Image
-						src={"/icon/github.svg"}
+						src={"/icons/github.svg"}
 						alt="github"
 						height={32}
 						width={32}
@@ -38,19 +38,19 @@ export default function GitHubButton() {
 						label={metadata.title as string}
 						description="Source for Quorum's LEGO® SPIKE™ library documentation website. Built using Next.js and Tailwind."
 						url={docsGithubUrl}
-						imageSrc="/screenshots/docs-ui.png"
+						imageSrc="/images/docs-ui.png"
 					/>
 					<GitHubSource
 						label="Quorum Language"
 						description="Source for the Quorum language. The world's first evidence oriented programming language."
 						url={quorumLanguageGithubUrl}
-						imageSrc="/screenshots/quorum-website.png"
+						imageSrc="/images/quorum-website.png"
 					/>
 					<GitHubSource
 						label="Quorum Studio"
 						description="Source for Quorum Studio. Build powerful programs with Quorum's development environment."
 						url={quorumStudioGithubUrl}
-						imageSrc="/screenshots/quorum-studio-ui.png"
+						imageSrc="/images/quorum-studio-ui.png"
 					/>
 				</div>
 			</DialogContent>

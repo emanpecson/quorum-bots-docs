@@ -12,7 +12,11 @@ export default function PreviewSection() {
 		<BlurFade {...blurFadeProps}>
 			<div className="flex lg:justify-start justify-center">
 				<Image
-					src={resolvedTheme === "dark" ? "/blocks-bunny-dark.png" : "/blocks-bunny-light.png"}
+					src={
+						resolvedTheme === "dark"
+							? "/images/blocks-bunny-dark.png"
+							: "/images/blocks-bunny-light.png"
+					}
 					alt="Bunny and bot"
 					height={24}
 					width={24}
