@@ -88,7 +88,7 @@ export const contributors: Contributor[] = [
 	{
 		name: "Daniela Pedraza Orenday",
 		imageSrc: "https://avatars.githubusercontent.com/u/180346940?v=4",
-		roles: [Role.WEB_DEV, Role.TECH_WRITER],
+		roles: [Role.API_DEV, Role.WEB_DEV, Role.TECH_WRITER],
 		socials: [
 			{
 				label: "GitHub",
@@ -101,7 +101,7 @@ export const contributors: Contributor[] = [
 	{
 		name: "Anh Kiet Cong",
 		imageSrc: "https://avatars.githubusercontent.com/u/98198302?v=4",
-		roles: [Role.WEB_DEV, Role.TECH_WRITER],
+		roles: [Role.API_DEV, Role.WEB_DEV, Role.TECH_WRITER],
 		socials: [
 			{ label: "GitHub", url: "https://github.com/anhcong0901", imageSrc: "/icons/github.svg" },
 			{ label: "Email", url: `${email}conga1@unlv.nevada.edu`, imageSrc: MailIcon },

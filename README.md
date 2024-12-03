@@ -14,6 +14,7 @@ Next:
 - [1. Contributing to libraries](#1-contributing-to-libraries) - (~45-60 min)
 - [2. Write some paragraphs for our docs introduction section](#2-write-some-paragraphs-for-our-docs-introduction-section) - (~15 min)
 - [3. Add a new page](#3-add-a-new-page) - (~10 min)
+- [4. Update contributors data](#4-update-contributors-data) - (~5 min)
 
 ### Git best practices
 I advise that you create a new branch for the specific thing you work on. Then, you can setup a [pull request in GitHub](https://github.com/emanpecson/lego-spike-docs/pulls) so that we can get it reviewed before merging your branch into `main`. This way, we can prevent pushing anything that might break the page.
@@ -431,3 +432,34 @@ Go to `src/data/routes.tsx` and look for `mainRoutes`. These are pages that make
 	`{ name: string, path: string; }`
 	- i.e. ``{ name: "My Page", path: `/my-page` }``
 7. You're done! You can now either edit the file yourself or leave it for someone to contribute to.
+
+## 4. Update contributors data
+
+In the website, contributor information can be found at `quorumbots.com/contributors` (or `localhost:3000/contributors`) All updates will be handled at `~/data/contributors.ts`. Find this file.
+
+### Updating your contact info (socials)
+
+In the website, these are the button icons you see beneath your name.
+
+Find the `contributors` array and find your `socials` attribute. It's an array of type `Social` (see its interface definition for specifics).
+
+By default, you should all have some item for your GitHub and Email. I wasn't sure what contact info you all preferred so I just included the info I found. You should review the values and update (or remove) if you choose to.
+
+If you want to add additional socials (like LinkedIn or a personal website), then see the name, "Emanuel Pecson", for an example of how these are defined.
+
+
+### Updating your image
+
+By default, I set the image source to your GitHub avatar. There are 2 very simple ways to update the image:
+
+#### A. GitHub avatar
+If you keep the `imageSrc` attribute as your GitHub avatar, then you can update your avatar on GitHub and this will automatically sync on our website.
+
+#### B. Adding an image to the `public` folder
+Or, you can drop your image file at `~/public/images/`. Then find `contributors` array and update your `imageSrc` value as: `"/images/[my-image.png]"`.
+
+### Updating your role(s)
+
+I added a set of roles that might generally label some of the things you've done in the project. This can be found in the `enum Role` definition. Feel free to add any other roles that you see fit.
+
+Then to add roles, find the `contributors` array and update the `roles` attribute.
