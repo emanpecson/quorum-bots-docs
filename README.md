@@ -4,7 +4,7 @@ Please install this before continuing: [Node](https://nodejs.org/en/download/pac
 
 Next:
 
-1. clone repository: [lego-spike-docs](https://github.com/emanpecson/lego-spike-docs)
+1. clone repository: [quorum-bots-docs](https://github.com/emanpecson/quorum-bots-docs)
 2. run `npm install` in the terminal
 3. run `npm run dev` and open `localhost:3000` on a browser
 4. click on `Docs` button in the header to get to our Documentation page
@@ -17,7 +17,7 @@ Next:
 - [4. Update contributors data](#4-update-contributors-data) - (~5 min)
 
 ### Git best practices
-I advise that you create a new branch for the specific thing you work on. Then, you can setup a [pull request in GitHub](https://github.com/emanpecson/lego-spike-docs/pulls) so that we can get it reviewed before merging your branch into `main`. This way, we can prevent pushing anything that might break the page.
+I advise that you create a new branch for the specific thing you work on. Then, you can setup a [pull request in GitHub](https://github.com/emanpecson/quorum-bots-docs/pulls) so that we can get it reviewed before merging your branch into `main`. This way, we can prevent pushing anything that might break the page.
 
 ## 1. Contributing to libraries
 
@@ -292,7 +292,7 @@ These are some components you might be using when documenting:
 
 ### Reference the completed example
 
-Please reference [`src/app/docs/libraries/button/page.tsx`](https://github.com/emanpecson/lego-spike-docs/blob/main/src/app/docs/libraries/button/page.tsx) as an example for setting up documentation. It pretty much just copies over the documentation comments from the Quorum Language library implementation and puts it in here, so if you follow along, providing documentation to our web-page as a beginner to web-development should be doable.
+Please reference [`src/app/docs/libraries/button/page.tsx`](https://github.com/emanpecson/quorum-bots-docs/blob/main/src/app/docs/libraries/button/page.tsx) as an example for setting up documentation. It pretty much just copies over the documentation comments from the Quorum Language library implementation and puts it in here, so if you follow along, providing documentation to our web-page as a beginner to web-development should be doable.
 
 Here's one library documentation structure you can follow:
 - header for constants (if there are any)
@@ -305,7 +305,7 @@ Here's one library documentation structure you can follow:
 
 ### Understanding the file structure
 
-If you look under [`src/app/docs/(introduction)/...`](https://github.com/emanpecson/lego-spike-docs/tree/main/src/app/docs/(introduction)), there are some folders containing a `page.tsx`.
+If you look under [`src/app/docs/(introduction)/...`](https://github.com/emanpecson/quorum-bots-docs/tree/main/src/app/docs/(introduction)), there are some folders containing a `page.tsx`.
 
 ### To-do
 
@@ -324,7 +324,7 @@ Please see [refMap](#1-refmap) and [headers](#2-headers) for understanding how t
 
 ### Adding an "introduction" page
 
-Consists of `page.tsx` files here: [`src/app/docs/(introduction)/{page-name}/page.tsx`](https://github.com/emanpecson/lego-spike-docs/tree/main/src/app/docs/(introduction)).
+Consists of `page.tsx` files here: [`src/app/docs/(introduction)/{page-name}/page.tsx`](https://github.com/emanpecson/quorum-bots-docs/tree/main/src/app/docs/(introduction)).
 
 #### Steps:
 1. Create a folder to represent page name
@@ -365,7 +365,7 @@ Consists of `page.tsx` files here: [`src/app/docs/(introduction)/{page-name}/pag
 
 ### Adding a "library" page
 
-Consists of `page.tsx` files here: [`src/app/docs/libraries/{library-name}/page.tsx`](https://github.com/emanpecson/lego-spike-docs/tree/main/src/app/docs/libraries).
+Consists of `page.tsx` files here: [`src/app/docs/libraries/{library-name}/page.tsx`](https://github.com/emanpecson/quorum-bots-docs/tree/main/src/app/docs/libraries).
 
 #### Steps:
 1. Create a folder to represent library page name
