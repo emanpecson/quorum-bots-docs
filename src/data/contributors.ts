@@ -118,7 +118,8 @@ export const contributors: Contributor[] = [
 	},
 	{
 		name: "Dr. Andreas Stefik",
-		imageSrc: "https://web.cs.unlv.edu/stefika/media/me.jpg",
+		imageSrc:
+			"https://www.unlv.edu/sites/default/files/styles/450_width/public/media/image/2024-09/Andreas-Stefik.JPG?itok=7DGD2qOo",
 		roles: [Role.CREATOR],
 		socials: [
 			{

@@ -16,7 +16,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "web.cs.unlv.edu",
+				hostname: "www.unlv.edu",
 			},
 		],
 	},
