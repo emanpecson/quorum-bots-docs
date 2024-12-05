@@ -1,5 +1,4 @@
 "use client";
-
 import Content from "@/components/content/content";
 import ContentCode from "@/components/content/content-code";
 import ContentSection from "@/components/content/content-section";
@@ -8,11 +7,12 @@ import Constants from "@/components/library/constants";
 import MethodParams from "@/components/library/method-params";
 import MethodReturns from "@/components/library/method-returns";
 import NavWrapper from "@/components/navigation/nav-wrapper";
-import { GetPortEx, SetPortEx, ClearEx, GetPixelColorEx, SetPixelColorEx, ShowColorsEx } from "./data";
+import { GetPortEx, SetPortEx, GetColorIntegerEx, GetReflectionEx, GetRGBIEx } from "./data";
 import { useRefMap } from "@/hooks/useRefMap";
 import { ContentHeaderType } from "@/types/content-header";
 
-export default function ColorMatrixPage() {
+
+export default function ColorSensorPage() {
 	// generate ref map using these names
 	const refMap = useRefMap([
 		"GetPort",
@@ -25,25 +25,20 @@ export default function ColorMatrixPage() {
 		"SetPortParams",
 		"SetPortEx",
 
-		"Clear",
-		"ClearRet",
-		"ClearParams",
-		"ClearEx",
+		"GetColorInteger",
+		"GetColorIntegerRet",
+		"GetColorIntegerParams",
+		"GetColorIntegerEx",
 
-		"GetPixelColor",
-		"GetPixelColorRet",
-		"GetPixelColorParams",
-		"GetPixelColorEx",
+		"GetReflection",
+		"GetReflectionRet",
+		"GetReflectionParams",
+		"GetReflectionEx",
 
-		"SetPixelColor",
-		"SetPixelColorRet",
-		"SetPixelColorParams",
-		"SetPixelColorEx",
-
-		"ShowColors",
-		"ShowColorsRet",
-		"ShowColorsParams",
-		"ShowColorsEx",
+		"GetRGBI",
+		"GetRGBIRet",
+		"GetRGBIParams",
+		"GetRGBIEx",
 	]);
 
 	// define content headers
@@ -70,53 +65,43 @@ export default function ColorMatrixPage() {
 		},
 		{
 			id: "9",
-			label: "Clear()",
-			ref: refMap.Clear,
+			label: "GetColorInteger()",
+			ref: refMap.GetColorInteger,
 			subheaders: [
-				{ id: "10", label: "Returns", ref: refMap.ClearRet },
-				{ id: "11", label: "Parameters", ref: refMap.ClearParams },
-				{ id: "12", label: "Example", ref: refMap.ClearEx },
+				{ id: "10", label: "Returns", ref: refMap.GetColorIntegerRet },
+				{ id: "11", label: "Parameters", ref: refMap.GetColorIntegerParams },
+				{ id: "12", label: "Example", ref: refMap.GetColorIntegerEx },
 			],
 		},
 		{
 			id: "13",
-			label: "GetPixelColor(integer x, integer y)",
-			ref: refMap.GetPixelColor,
+			label: "GetReflection()",
+			ref: refMap.GetReflection,
 			subheaders: [
-				{ id: "14", label: "Returns", ref: refMap.GetPixelColorRet },
-				{ id: "15", label: "Parameters", ref: refMap.GetPixelColorParams },
-				{ id: "16", label: "Example", ref: refMap.GetPixelColorEx },
+				{ id: "14", label: "Returns", ref: refMap.GetReflectionRet },
+				{ id: "15", label: "Parameters", ref: refMap.GetReflectionParams },
+				{ id: "16", label: "Example", ref: refMap.GetReflectionEx },
 			],
 		},
 		{
 			id: "17",
-			label: "SetPixelColor(integer x, integer y, integer color, integer intensity)",
-			ref: refMap.SetPixelColor,
+			label: "GetRGBI()",
+			ref: refMap.GetRGBI,
 			subheaders: [
-				{ id: "18", label: "Returns", ref: refMap.SetPixelColorRet },
-				{ id: "19", label: "Parameters", ref: refMap.SetPixelColorParams },
-				{ id: "20", label: "Example", ref: refMap.SetPixelColorEx },
+				{ id: "18", label: "Returns", ref: refMap.GetRGBIRet },
+				{ id: "19", label: "Parameters", ref: refMap.GetRGBIParams },
+				{ id: "20", label: "Example", ref: refMap.GetRGBIEx },
 			],
-		},
-		{
-			id: "17",
-			label: "ShowColors(Array<integer> colorValues, Array<integer> intensityValues)",
-			ref: refMap.ShowColors,
-			subheaders: [
-				{ id: "18", label: "Returns", ref: refMap.ShowColorsRet },
-				{ id: "19", label: "Parameters", ref: refMap.ShowColorsParams },
-				{ id: "20", label: "Example", ref: refMap.ShowColorsEx },
-			],
-		},
+		}
 	];
 
 	return (
 		<NavWrapper
 			headers={headers}
-			title="ColorMatrix"
-			description="The color matrix is an external device that is connected to the hub through a port.
-    The color matrix is a 3x3 matrix of lights where the color and brightness of each pixel can be changed
-    to display things."
+			title="ColorSensor"
+			description="The color sensor is an external device that is connected to the hub through a port.
+    The color sensor is a unidirectional sensor that measures the intensity and rgb value of 
+    reflected light."
 		>
 			<Content>
 				{/* section: GetPort() */}
@@ -124,7 +109,7 @@ export default function ColorMatrixPage() {
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[0].subheaders[0]}>
 						<MethodReturns type="integer">
-						Returns the currently assigned port for this color matrix
+						Returns the currently assigned port for this color sensor
 						</MethodReturns>
 					</ContentSubsection>
 
@@ -154,7 +139,7 @@ export default function ColorMatrixPage() {
 									type: "integer",
 									identifier: "port",
 									description:
-										"The port that this color matrix object will be set to",
+										"The port that this color sensor object will be set to",
 								},
 							]} />
 					</ContentSubsection>
@@ -165,12 +150,12 @@ export default function ColorMatrixPage() {
 					</ContentSubsection>
 				</ContentSection>
 
-				{/* section: Clear() */}
+				{/* section: GetColorInteger() */}
 				<ContentSection header={headers[2]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[2].subheaders[0]}>
-						<MethodReturns type={null}>
-						Clears all pixels on the color matrix
+						<MethodReturns type="integer">
+						Returns the color, which is an integer corresponding to a color from the Color module
 						</MethodReturns>
 					</ContentSubsection>
 
@@ -181,84 +166,53 @@ export default function ColorMatrixPage() {
 
 					{/* sub-section: example */}
 					<ContentSubsection subheader={headers[2].subheaders[2]}>
-						<ContentCode code={ClearEx} showLineNumbers />
+						<ContentCode code={GetColorIntegerEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
-				{/* section: GetPixelColor() */}
+				{/* section: GetReflection() */}
 				<ContentSection header={headers[3]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[3].subheaders[0]}>
-						<MethodReturns type="Array<integer>">
-						Returns an array of size 2 with the color and intensity of the pixel at the provided x and y location
+						<MethodReturns type="integer">
+						Returns the intensity of reflected light detected by the color sensor from 0 to 100
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
 					<ContentSubsection subheader={headers[3].subheaders[1]}>
 						<MethodParams
-							params={[
-								{ type: "integer", identifier: "x", description: "The x location of the pixel, 0 to 2" },
-								{ type: "integer", identifier: "y", description: "The y location of the pixel, 0 to 2" },
-							]}
+							params={[]}
 						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
 					<ContentSubsection subheader={headers[3].subheaders[2]}>
-						<ContentCode code={GetPixelColorEx} showLineNumbers />
+						<ContentCode code={GetReflectionEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 
-				{/* section: SetPixelColor() */}
+				{/* section: GetRGBI() */}
 				<ContentSection header={headers[4]}>
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[4].subheaders[0]}>
-						<MethodReturns type={null}>
-						Sets the color and intensity of the pixel at the provided x and y location
+						<MethodReturns type="Array<integer>">
+						Returns an Array of integers of length 4, red (from 0 to 255) is at index 0, 
+        blue (from 0 to 255) is at index 1, green (from 0 to 255) is at index 2, and the intensity 
+        (from 0 to 100) is at index 3
 						</MethodReturns>
 					</ContentSubsection>
 
 					{/* sub-section: params */}
 					<ContentSubsection subheader={headers[4].subheaders[1]}>
 						<MethodParams
-							params={[
-								{ type: "integer", identifier: "x", description: "The x location of the pixel, 0 to 2" },
-								{ type: "integer", identifier: "y", description: "The y location of the pixel, 0 to 2" },
-								{ type: "integer", identifier: "color", description: "The color constant to set the pixel to (see Color)" },
-								{ type: "integer", identifier: "intensity", description: "The intensity (brightness) to set the pixel to" },
-							]}
+							params={[]}
 						/>
 					</ContentSubsection>
 
 					{/* sub-section: example */}
 					<ContentSubsection subheader={headers[4].subheaders[2]}>
-						<ContentCode code={SetPixelColorEx} showLineNumbers />
-					</ContentSubsection>
-				</ContentSection>
-
-				{/* section: ShowColors() */}
-				<ContentSection header={headers[5]}>
-					{/* sub-section: returns */}
-					<ContentSubsection subheader={headers[5].subheaders[0]}>
-						<MethodReturns type={null}>
-						Changes the color and intensity (brightness) of all pixels from the provided color and intensity arrays
-						</MethodReturns>
-					</ContentSubsection>
-
-					{/* sub-section: params */}
-					<ContentSubsection subheader={headers[5].subheaders[1]}>
-						<MethodParams
-							params={[
-								{ type: "Array<integer>", identifier: "colorValues", description: "An integer array of size 9 containing the color for each pixel" },
-								{ type: "Array<integer>", identifier: "intensityValues", description: "An integer array of size 9 containing the intensity for each pixel" },
-							]}
-						/>
-					</ContentSubsection>
-
-					{/* sub-section: example */}
-					<ContentSubsection subheader={headers[5].subheaders[2]}>
-						<ContentCode code={ShowColorsEx} showLineNumbers />
+						<ContentCode code={GetRGBIEx} showLineNumbers />
 					</ContentSubsection>
 				</ContentSection>
 			</Content>
