@@ -59,7 +59,7 @@ export default function DevicePage() {
 			subheaders: [
 				{ id: "2", label: "Returns", ref: refMap.GetDataFromPortRet },
 				{ id: "3", label: "Parameters", ref: refMap.GetDataFromPortParams },
-				{ id: "4", label: "Example", ref: refMap.GetDataFromPorttEx },
+				{ id: "4", label: "Example", ref: refMap.GetDataFromPortEx },
 			],
 		},
 		{
@@ -101,17 +101,7 @@ export default function DevicePage() {
 				{ id: "19", label: "Parameters", ref: refMap.IsPortReadyParams },
 				{ id: "20", label: "Example", ref: refMap.IsPortReadyEx },
 			],
-		},
-		{
-			id: "17",
-			label: "ShowColors(Array<integer> colorValues, Array<integer> intensityValues)",
-			ref: refMap.ShowColors,
-			subheaders: [
-				{ id: "18", label: "Returns", ref: refMap.ShowColorsRet },
-				{ id: "19", label: "Parameters", ref: refMap.ShowColorsParams },
-				{ id: "20", label: "Example", ref: refMap.ShowColorsEx },
-			],
-		},
+		}
 	];
 
 	return (
