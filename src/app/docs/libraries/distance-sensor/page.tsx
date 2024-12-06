@@ -39,7 +39,6 @@ export default function DistanceSensorPage() {
 		"SetPixelRet",
 		"SetPixelParams",
 		"SetPixelEx",
-
 		
 		"ClearLights",
 		"ClearLightsRet",
@@ -222,8 +221,7 @@ export default function DistanceSensorPage() {
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[3].subheaders[0]}>
 						<MethodReturns type="integer">
-						Returns the intensity, a value between 0 and 100, of a specific pixel on the distance sensor's
-						light display
+						Returns the intensity, a value between 0 and 100, of a specific pixel on the light display on the distance sensor
 						</MethodReturns>
 					</ContentSubsection>
 
@@ -256,8 +254,7 @@ export default function DistanceSensorPage() {
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[4].subheaders[0]}>
 						<MethodReturns type={null}>
-						Sets the intensity of a specific pixel on the distance sensor's
-						light display
+						Sets the intensity of a specific pixel on the light display on the distance sensor
 						</MethodReturns>
 					</ContentSubsection>
 
@@ -296,7 +293,7 @@ export default function DistanceSensorPage() {
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[5].subheaders[0]}>
 						<MethodReturns type={null}>
-						Shuts off all lights on the distance sensor's light display
+						Shuts off all lights on the light display on the distance sensor
 						</MethodReturns>
 					</ContentSubsection>
 
