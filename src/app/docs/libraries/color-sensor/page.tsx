@@ -197,9 +197,9 @@ export default function ColorSensorPage() {
 					{/* sub-section: returns */}
 					<ContentSubsection subheader={headers[4].subheaders[0]}>
 						<MethodReturns type="Array<integer>">
-						Returns an Array of integers of length 4, red (from 0 to 255) is at index 0, 
-        blue (from 0 to 255) is at index 1, green (from 0 to 255) is at index 2, and the intensity 
-        (from 0 to 100) is at index 3
+						An Array of integers of length 4, red (from 0 to 1024) is at index 0, 
+        blue (from 0 to 1024) is at index 1, green (from 0 to 1024) is at index 2, and the intensity 
+        (from 0 to 1024) is at index 3
 						</MethodReturns>
 					</ContentSubsection>
 
