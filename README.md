@@ -435,7 +435,9 @@ Go to `src/data/routes.tsx` and look for `mainRoutes`. These are pages that make
 
 ## 4. Update contributors data
 
-In the website, contributor information can be found at `quorumbots.com/contributors` (or `localhost:3000/contributors`) All updates will be handled at `~/data/contributors.ts`. Find this file.
+In the website, contributor information can be found at `quorumbots.com/contributors` (or `localhost:3000/contributors`)
+
+**All data updates will be handled at `~/data/contributors.ts`. Find this file.**
 
 ### Updating your contact info (socials)
 
@@ -446,7 +448,6 @@ Find the `contributors` array and find your `socials` attribute. It's an array o
 By default, you should all have some item for your GitHub and Email. I wasn't sure what contact info you all preferred so I just included the info I found. You should review the values and update (or remove) if you choose to.
 
 If you want to add additional socials (like LinkedIn or a personal website), then see the name, "Emanuel Pecson", for an example of how these are defined.
-
 
 ### Updating your image
 
