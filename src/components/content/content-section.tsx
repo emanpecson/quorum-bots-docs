@@ -1,11 +1,11 @@
 import { ContentHeaderType } from "@/types/content-header";
 
-interface ContextSectionProps {
+interface ContentSectionProps {
 	header: ContentHeaderType;
 	children: React.ReactNode;
 }
 
-export default function ContentSection(props: ContextSectionProps) {
+export default function ContentSection(props: ContentSectionProps) {
 	return (
 		<div className="divide-y">
 			<h2
