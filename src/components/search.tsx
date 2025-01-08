@@ -82,7 +82,7 @@ export default function Search(props: SearchProps) {
 				<DialogTitle className="hidden">Search</DialogTitle>
 
 				<Command>
-					<CommandInput placeholder="Search doucmentation..." />
+					<CommandInput placeholder="Search documentation..." />
 					<CommandList>
 						<CommandEmpty>No page found</CommandEmpty>
 						<CommandGroup>
